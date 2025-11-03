@@ -50,7 +50,6 @@
 ```
 signature-final.html                       ⭐ YOUR EMAIL SIGNATURE (with disclaimer)
 signature-final-preview.html               Preview for easy copying
-voorbeeld.html                             Original design reference
 ```
 
 ### Deployment Folder

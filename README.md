@@ -39,7 +39,6 @@ Your email signature is ready to use!
 |------|---------|
 | **`signature-final.html`** | Your email signature ⭐ USE THIS |
 | **`signature-final-preview.html`** | Preview page for easy copying |
-| **`voorbeeld.html`** | Your original design reference |
 
 ---
 
@@ -87,8 +86,7 @@ Email_Signature_JosVisserICT/
 │
 ├── 📧 SIGNATURE FILES
 │   ├── signature-final.html                  ⭐ YOUR EMAIL SIGNATURE
-│   ├── signature-final-preview.html          Preview page
-│   └── voorbeeld.html                        Design reference
+│   └── signature-final-preview.html          Preview page
 │
 ├── ☁️ CLOUDFLARE DEPLOYMENT
 │   └── cloudflare-pages/
