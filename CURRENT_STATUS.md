@@ -8,16 +8,18 @@
 ## 🎯 What's Working
 
 ### ✅ Email Signature
-- **File:** `signature-new-layout-with-disclaimer.html`
-- **Layout:** Square logo left, orange separator line, contact info right
+- **File:** `signature-final.html` ⭐
+- **Layout:** 90×90px logo left, gradient orange separator (220px), contact info right
+- **Design:** Based on custom voorbeeld.html with rounded logo corners
 - **Disclaimer:** Dutch (AVG/GDPR compliant)
-- **Status:** ✅ Working in macOS Mail
+- **Status:** ✅ Working perfectly on desktop & mobile
 
 ### ✅ Logo
 - **File:** `josvisser-logo.png`
-- **Resolution:** 1360×1360px (displayed at 240×240px)
+- **Resolution:** 1360×1360px (displayed at 90×90px)
 - **URL:** `https://static.josvisserict.nl/assets/josvisser-logo.png`
-- **Color:** Orange (#f6a000)
+- **Color:** Orange (#ea8b39)
+- **Style:** Rounded corners (12px border-radius)
 - **Themes:** Works for both light and dark mode
 - **Status:** ✅ Deployed and loading correctly
 
@@ -46,9 +48,15 @@
 
 ### Signature Files (Use These)
 ```
-signature-new-layout.html                  - Without disclaimer
-signature-new-layout-with-disclaimer.html  - With disclaimer ⭐ USE THIS
-signature-new-preview.html                 - Preview for copying
+signature-final.html                       ⭐ MAIN SIGNATURE (with disclaimer)
+signature-final-preview.html               Preview for easy copying
+voorbeeld.html                             Your original design reference
+```
+
+### Alternative Layouts (Optional)
+```
+signature-new-layout.html                  Older version (120×120 logo)
+signature-new-layout-with-disclaimer.html  Older version with disclaimer
 ```
 
 ### Deployment Folder
@@ -90,16 +98,18 @@ package.json                   - NPM configuration
 ## 🎨 Design Specifications
 
 ### Colors
-- **Primary:** Orange `#f6a000`
-- **Gradient:** `#f6a000` → `#ff8c00`
-- **Dark mode link:** `#ffa500`
-- **Text:** `#4b5563` / `#6b7280`
+- **Primary Orange:** `#ea8b39`
+- **Gradient:** `#ea8b39` → `rgba(234, 139, 57, 0.3)`
+- **Name:** `#1a1a1a`
+- **Text:** `#666666`
+- **Disclaimer:** `#999999`
 
 ### Layout
-- **Logo:** 240×240px (1360×1360 source)
-- **Separator:** 2px wide × 240px high, orange
+- **Logo:** 90×90px (1360×1360 source, rounded 12px)
+- **Separator:** 3px wide × 220px high, gradient orange
 - **Font:** System fonts (Apple, Segoe UI, Roboto)
 - **Max width:** 600px
+- **Mobile-optimized:** Compact design
 
 ### Features
 - Dark/light mode support (text colors adapt)

@@ -2,49 +2,79 @@
 
 Professional email signature with dark/light mode support and Cloudflare Pages deployment.
 
-<parameter name="https://github.com/Qballjos/Email_Signature_JosVisserICT/assets/banner.png" alt="Email Signature Preview" />
+## ✅ Status: Fully Operational
+
+Your email signature is ready to use!
+
+---
 
 ## ✨ Features
 
-- 🌓 **Automatic dark/light mode** switching
-- 📱 **Mobile-responsive** design
-- 🔒 **Privacy-focused** (Apple Mail compatible)
-- 🌐 **Global CDN** via Cloudflare Pages
-- 📧 **Universal compatibility** (Gmail, Outlook, Apple Mail, etc.)
-- ⚡ **Fast setup** - 10 minutes to deploy
+- 🎨 **Clean, modern design** based on your custom layout
+- 🌓 **Dark mode support** - text colors adapt automatically
+- 📱 **Mobile-optimized** - 90×90px logo, perfect for all devices
+- 🟠 **Orange branding** - Gradient separator (#ea8b39)
+- 🔒 **Privacy-focused** - AVG/GDPR compliant disclaimer
+- 🌐 **Global CDN** - Fast loading via `static.josvisserict.nl`
+- 📧 **Universal compatibility** - Gmail, Outlook, Apple Mail, iOS
 
 ---
 
-## ✅ Status: Ready to Use!
+## 🚀 Quick Start
 
-Your signature is fully configured and working:
+### Installation
 
-### 1. Logo ✅
-`josvisser-logo.png` deployed at `https://static.josvisserict.nl/assets/josvisser-logo.png`
-
-### 2. Cloudflare Pages ✅
-Connected to `static.josvisserict.nl` with proper CORS headers
-
-### 3. Signature Files ✅
-Use `signature-new-layout-with-disclaimer.html` (includes Dutch disclaimer)
-
-### 4. Install in Email Client
-Open `signature-new-preview.html` in browser, copy, and paste into Mail
+1. **Open preview:** `signature-final-preview.html` in your browser
+2. **Copy signature:** Select from gray box, press Cmd+A, Cmd+C
+3. **Install in Mail:** Settings → Signatures → Create new → Paste (Cmd+V)
+4. **Done!** ✅
 
 ---
 
-## 📚 Full Documentation
+## 📁 Main Files
 
-**All guides are in the [Wiki →](https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki)**
+| File | Purpose |
+|------|---------|
+| **`signature-final.html`** | Your email signature ⭐ USE THIS |
+| **`signature-final-preview.html`** | Preview page for easy copying |
+| **`voorbeeld.html`** | Your original design reference |
+
+---
+
+## 📚 Documentation
+
+**All guides in the [Wiki →](https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki)**
 
 | Guide | Description |
 |-------|-------------|
-| **[Quick Start Guide](https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki/Quick-Start-Guide)** | Get started in 10 minutes |
-| **[Installation Guide](https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki/Installation-Guide)** | Step-by-step installation |
-| **[Deployment Guide](https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki/Deployment-Guide)** | Deploy to Cloudflare Pages |
-| **[Logo Requirements](https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki/Logo-Requirements)** | How to create your logos |
-| **[GitHub Setup](https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki/GitHub-Setup)** | Configure repository |
-| **[Troubleshooting](https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki/Troubleshooting)** | Common issues & solutions |
+| [Quick Start](https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki/Quick-Start-Guide) | Get started fast |
+| [Installation](https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki/Installation-Guide) | Detailed setup |
+| [iOS Compatibility](https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki/iOS-Compatibility) | iPhone & iPad guide |
+| [Troubleshooting](https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki/Troubleshooting) | Common issues |
+
+---
+
+## 🎨 Design Specifications
+
+### Logo
+- **File:** `josvisser-logo.png`
+- **Original:** 1360×1360px (high-resolution)
+- **Display:** 90×90px (mobile-friendly)
+- **Style:** Rounded corners (12px radius)
+- **URL:** `https://static.josvisserict.nl/assets/josvisser-logo.png`
+
+### Colors
+- **Primary Orange:** `#ea8b39`
+- **Gradient:** `#ea8b39` → `rgba(234, 139, 57, 0.3)`
+- **Name:** `#1a1a1a` (dark gray)
+- **Text:** `#666666` (medium gray)
+- **Disclaimer:** `#999999` (light gray)
+
+### Layout
+- **Logo:** 90×90px with rounded corners
+- **Separator:** 3px wide × 220px tall, gradient orange
+- **Font:** System fonts (Apple, Segoe UI, Roboto)
+- **Mobile-optimized:** Compact design
 
 ---
 
@@ -52,18 +82,20 @@ Open `signature-new-preview.html` in browser, copy, and paste into Mail
 
 ```
 Email_Signature_JosVisserICT/
-├── signature-new-layout.html                  # Signature without disclaimer
-├── signature-new-layout-with-disclaimer.html  # Signature with disclaimer ⭐
-├── signature-new-preview.html                 # Preview page
-├── cloudflare-pages/                         # Deploy this folder
+│
+├── signature-final.html                  ⭐ YOUR EMAIL SIGNATURE
+├── signature-final-preview.html          Preview page
+├── voorbeeld.html                        Your design reference
+│
+├── cloudflare-pages/                     Deployed to static.josvisserict.nl
 │   ├── assets/
-│   │   ├── app.png                           # Original logo (1360×1360)
-│   │   └── josvisser-logo.png               # Used in signature ✅
-│   ├── index.html                            # Asset hosting page
-│   ├── privacy.html                          # Privacy policy
-│   └── _headers                              # CORS configuration
-├── disclaimers/                              # Standalone disclaimers
-└── wiki/                                     # Wiki content (see GitHub Wiki)
+│   │   ├── app.png                      Original logo (1360×1360)
+│   │   └── josvisser-logo.png          Used in signature ✅
+│   ├── privacy.html                     Privacy policy (Dutch)
+│   └── index.html                       Asset landing page
+│
+├── wiki/                                 Complete documentation
+└── disclaimers/                          Standalone disclaimer files
 ```
 
 ---
@@ -80,46 +112,36 @@ ICT Specialist
 
 ---
 
-## 🎨 Preview
+## 🌐 Live URLs
 
-Open `preview.html` in your browser to see how the signature looks in light and dark modes.
+| Resource | URL | Status |
+|----------|-----|--------|
+| **Logo** | https://static.josvisserict.nl/assets/josvisser-logo.png | ✅ Live |
+| **Privacy** | https://static.josvisserict.nl/privacy.html | ✅ Live |
+| **Repository** | https://github.com/Qballjos/Email_Signature_JosVisserICT | ✅ Public |
+| **Wiki** | https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki | ✅ Live |
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Technology
 
-- **HTML** - Email-safe markup
+- **HTML** - Email-safe table-based layout
 - **CSS** - Inline styles with dark mode support
 - **Cloudflare Pages** - Asset hosting & CDN
-- **GitHub Actions** - Automated deployment
+- **Custom Domain** - `static.josvisserict.nl`
 
 ---
 
 ## 📄 License
 
-MIT License - See [LICENSE](LICENSE) file for details.
+MIT License - See [LICENSE](LICENSE) file.
 
 Copyright © 2025 Jos Visser
 
 ---
 
-## 🤝 Contributing
+## 🎉 Ready to Use!
 
-This is a personal email signature project, but feel free to:
-- ⭐ Star the repository if you find it useful
-- 🐛 Report issues
-- 💡 Suggest improvements
-- 🔀 Fork for your own use
+Your professional email signature is complete and working. Visit the [Wiki](https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki) for complete documentation.
 
----
-
-## ⚡ Quick Links
-
-- **[📖 View Wiki](https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki)** - Complete documentation
-- **[🚀 Quick Start](https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki/Quick-Start-Guide)** - Get started now
-- **[🆘 Troubleshooting](https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki/Troubleshooting)** - Common issues
-- **[🐛 Report Issue](https://github.com/Qballjos/Email_Signature_JosVisserICT/issues)** - Found a problem?
-
----
-
-**Ready to start?** Visit the **[Wiki](https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki)** for complete guides! 🎉
+**Questions?** See [CURRENT_STATUS.md](CURRENT_STATUS.md) for detailed configuration info.
