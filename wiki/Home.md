@@ -9,6 +9,7 @@ Welcome to the Email Signature wiki! This guide will help you set up a professio
 - **[Deployment Guide](Deployment-Guide)** - Deploy to Cloudflare Pages
 - **[Logo Requirements](Logo-Requirements)** - How to create your logos
 - **[GitHub Setup](GitHub-Setup)** - Configure your repository
+- **[iOS Compatibility](iOS-Compatibility)** - iPhone & iPad setup guide
 - **[Troubleshooting](Troubleshooting)** - Common issues and solutions
 
 ## 📧 What Is This?
@@ -42,6 +43,7 @@ Email_Signature_JosVisserICT/
 | In a hurry (10 min) | [Quick Start Guide](Quick-Start-Guide) |
 | Want details (30 min) | [Installation Guide](Installation-Guide) |
 | Technical user | [Deployment Guide](Deployment-Guide) |
+| Using iPhone/iPad | [iOS Compatibility](iOS-Compatibility) |
 | Need logo help | [Logo Requirements](Logo-Requirements) |
 
 ## 📞 Contact Information

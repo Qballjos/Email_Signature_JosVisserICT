@@ -14,6 +14,7 @@
 ### 📚 Guides
 - [Logo Requirements](Logo-Requirements)
 - [GitHub Setup](GitHub-Setup)
+- [iOS Compatibility](iOS-Compatibility)
 - [Troubleshooting](Troubleshooting)
 
 ---
