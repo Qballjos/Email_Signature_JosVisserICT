@@ -1,0 +1,23 @@
+# Cloudflare Pages Configuration
+name = "email-signature-jos"
+compatibility_date = "2024-01-01"
+
+[site]
+bucket = "."
+
+# Build configuration
+[build]
+command = ""
+cwd = ""
+watch_paths = ["assets/**"]
+
+# Environment variables (if needed)
+[env.production]
+# Add any environment variables here if needed
+
+# Custom domain configuration (optional)
+# Uncomment and configure after setting up your custom domain in Cloudflare
+# routes = [
+#   { pattern = "assets.josvisserict.nl", custom_domain = true }
+# ]
+

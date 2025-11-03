@@ -1,0 +1,31 @@
+{
+  "name": "email-signature-josvisserict",
+  "version": "1.0.0",
+  "description": "Professional email signature for Jos Visser ICT with dark/light mode support",
+  "private": true,
+  "scripts": {
+    "preview": "open preview.html || xdg-open preview.html",
+    "deploy": "cd cloudflare-pages && wrangler pages deploy . --project-name=email-signature-jos",
+    "deploy:production": "cd cloudflare-pages && wrangler pages deploy . --project-name=email-signature-jos --branch=main",
+    "login": "wrangler login",
+    "dev": "cd cloudflare-pages && wrangler pages dev .",
+    "validate": "echo '✅ Checking files...' && ls -la cloudflare-pages/assets/ && echo '✅ Files validated!'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qballjos/Email_Signature_JosVisserICT.git"
+  },
+  "keywords": [
+    "email-signature",
+    "html-email",
+    "responsive",
+    "dark-mode",
+    "cloudflare-pages"
+  ],
+  "author": "Jos Visser <info@josvisserict.nl>",
+  "license": "SEE LICENSE IN LICENSE",
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
+
