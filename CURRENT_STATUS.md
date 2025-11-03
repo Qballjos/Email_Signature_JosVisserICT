@@ -46,17 +46,11 @@
 
 ## 📁 Final File Structure
 
-### Signature Files (Use These)
+### Signature Files
 ```
-signature-final.html                       ⭐ MAIN SIGNATURE (with disclaimer)
+signature-final.html                       ⭐ YOUR EMAIL SIGNATURE (with disclaimer)
 signature-final-preview.html               Preview for easy copying
-voorbeeld.html                             Your original design reference
-```
-
-### Alternative Layouts (Optional)
-```
-signature-new-layout.html                  Older version (120×120 logo)
-signature-new-layout-with-disclaimer.html  Older version with disclaimer
+voorbeeld.html                             Original design reference
 ```
 
 ### Deployment Folder

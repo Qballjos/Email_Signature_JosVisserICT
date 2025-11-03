@@ -85,19 +85,28 @@ Your email signature is ready to use!
 ```
 Email_Signature_JosVisserICT/
 │
-├── signature-final.html                  ⭐ YOUR EMAIL SIGNATURE
-├── signature-final-preview.html          Preview page
-├── voorbeeld.html                        Your design reference
+├── 📧 SIGNATURE FILES
+│   ├── signature-final.html                  ⭐ YOUR EMAIL SIGNATURE
+│   ├── signature-final-preview.html          Preview page
+│   └── voorbeeld.html                        Design reference
 │
-├── cloudflare-pages/                     Deployed to static.josvisserict.nl
-│   ├── assets/
-│   │   ├── app.png                      Original logo (1360×1360)
-│   │   └── josvisser-logo.png          Used in signature ✅
-│   ├── privacy.html                     Privacy policy (Dutch)
-│   └── index.html                       Asset landing page
+├── ☁️ CLOUDFLARE DEPLOYMENT
+│   └── cloudflare-pages/
+│       ├── assets/
+│       │   ├── app.png                      Original logo (1360×1360)
+│       │   └── josvisser-logo.png          Active logo ✅
+│       ├── privacy.html                     Privacy policy
+│       └── index.html                       Asset page
 │
-├── wiki/                                 Complete documentation
-└── disclaimers/                          Standalone disclaimer files
+├── 📚 DOCUMENTATION
+│   ├── README.md                            Main readme
+│   ├── CURRENT_STATUS.md                    Configuration info
+│   ├── LOGO_SETUP.md                        Logo guide
+│   └── wiki/                                Complete wiki (11 pages)
+│
+└── 📜 EXTRAS
+    ├── disclaimers/                         Standalone disclaimers
+    └── assets/screenshot.png                Preview image
 ```
 
 ---
