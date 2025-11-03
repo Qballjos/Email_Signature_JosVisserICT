@@ -140,5 +140,3 @@ Copyright © 2025 Jos Visser
 ## 🎉 Ready to Use!
 
 Your professional email signature is complete and working. Visit the [Wiki](https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki) for complete documentation.
-
-**Questions?** See [CURRENT_STATUS.md](CURRENT_STATUS.md) for detailed configuration info.
