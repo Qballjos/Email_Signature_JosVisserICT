@@ -2,6 +2,8 @@
 
 Professional email signature with dark/light mode support and Cloudflare Pages deployment.
 
+![Email Signature Preview](assets/screenshot.png)
+
 ## ✅ Status: Fully Operational
 
 Your email signature is ready to use!
