@@ -17,14 +17,13 @@ This guide covers:
 
 ## Step 1: Prepare Your Logos
 
-### What You Need
+### ✅ Logo Already Ready
 
-Two versions of your logo:
+Your logo is configured:
 
-| File | Purpose | Design |
-|------|---------|--------|
-| `logo-light.png` | Light mode | Dark colored logo |
-| `logo-dark.png` | Dark mode | Light colored logo |
+| File | Details |
+|------|---------|
+| `josvisser-logo.png` | 1360×1360px, works for both light and dark mode |
 
 ### Specifications
 
@@ -35,15 +34,15 @@ Two versions of your logo:
 
 **Detailed guide:** [Logo Requirements](Logo-Requirements)
 
-### Where to Place Them
+### Current Location
 
 ```
 cloudflare-pages/assets/
-├── logo-light.png
-└── logo-dark.png
+├── app.png (original high-res)
+└── josvisser-logo.png (used in signature) ✅
 ```
 
-Also keep backups in `assets/` folder.
+Logo is already deployed and working!
 
 ---
 

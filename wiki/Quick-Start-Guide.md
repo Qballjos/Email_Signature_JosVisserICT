@@ -2,19 +2,13 @@
 
 Get your email signature running in **10 minutes**!
 
-## Step 1: Add Your Logos (5 minutes)
+## ✅ Step 1: Logo Already Added!
 
-Create two logo files:
+Your logo is already configured:
 
-1. **logo-light.png** - Dark logo for light backgrounds
-2. **logo-dark.png** - Light logo for dark backgrounds
-
-**Place them in:**
-```
-cloudflare-pages/assets/
-├── logo-light.png
-└── logo-dark.png
-```
+**File:** `josvisser-logo.png`  
+**Location:** `cloudflare-pages/assets/josvisser-logo.png`  
+**Status:** ✅ Deployed and working!
 
 **Need help?** See [Logo Requirements](Logo-Requirements)
 

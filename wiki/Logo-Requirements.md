@@ -2,21 +2,16 @@
 
 Complete guide to creating logos for your email signature.
 
-## Required Files
+## ✅ Current Setup
 
-Create **TWO versions** of your logo:
+Your logo is already configured!
 
-### 1. logo-light.png
-- **Use case:** Light mode (default)
-- **Design:** Dark colored logo
-- **Shows on:** White/light backgrounds
-- **Example:** Black or dark blue
-
-### 2. logo-dark.png
-- **Use case:** Dark mode
-- **Design:** Light colored logo
-- **Shows on:** Dark/black backgrounds
-- **Example:** White or light gray
+### josvisser-logo.png
+- **Resolution:** 1360×1360px (high-resolution)
+- **Displayed at:** 240×240px in email
+- **Works for:** Both light AND dark mode
+- **Design:** Orange branding (#f6a000)
+- **File size:** 56KB
 
 ---
 
@@ -47,20 +42,14 @@ Create **TWO versions** of your logo:
 
 ## Design Guidelines
 
-### For logo-light.png:
+### For universal logos (like yours):
 ```
-✅ Use dark colors (black, navy, dark blue)
-✅ High contrast against white
+✅ Use medium/bright colors (orange #f6a000 works!)
+✅ High contrast on both light and dark
 ✅ Readable at small sizes
-❌ Avoid light colors (invisible on light)
-```
-
-### For logo-dark.png:
-```
-✅ Use light colors (white, light gray)
-✅ High contrast against dark
-✅ Same layout as light version
-❌ Avoid dark colors (invisible on dark)
+✅ Transparent background
+❌ Avoid pure black or pure white
+❌ Avoid very light or very dark grays
 ```
 
 ---

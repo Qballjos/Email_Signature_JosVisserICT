@@ -9,12 +9,12 @@ Your email signature uses **ONE logo** that works for both light and dark themes
 Place your logo file here:
 
 ```
-cloudflare-pages/assets/logo.png
+cloudflare-pages/assets/josvisser-logo.png
 ```
 
 **URL when deployed:**
 ```
-https://static.josvisserict.nl/assets/logo.png
+https://static.josvisserict.nl/assets/josvisser-logo.png
 ```
 
 ---
@@ -77,26 +77,21 @@ Since your logo needs to work on both light and dark backgrounds:
 
 ## Current Files
 
-You currently have:
-- `logo-light.png` (dark colored for light backgrounds)
-- `logo-dark.png` (light colored for dark backgrounds)
+You have:
+- `app.png` (original source: 1360×1360px, 56KB)
+- `josvisser-logo.png` (same as app.png, used in email signature)
 
-**New approach:** Since your logo works for both, you only need `logo.png`
+**Your logo works for both light and dark themes!** Orange (#f6a000) provides good contrast on both.
 
 ---
 
 ## Migration Steps
 
-### Option 1: Rename Your Best Logo
+### Current Setup
 
-If one of your current logos works for both:
-
-```bash
-cd /Users/qballjos/Documents/GitHub/Email_Signature_JosVisserICT/cloudflare-pages/assets
-cp logo-light.png logo.png
-# Or
-cp logo-dark.png logo.png
-```
+Your logo is already set up:
+- **Original:** `app.png` (1360×1360px, 56KB) - High-resolution source
+- **Used in signature:** `josvisser-logo.png` (same as app.png, displayed at 240×240px)
 
 ### Option 2: Create New Universal Logo
 
@@ -142,18 +137,17 @@ width: 200px; height: 80px;
 
 After adding/updating `logo.png`:
 
-### 1. Place file:
+### 1. Files already in place:
 ```
-cloudflare-pages/assets/logo.png
+cloudflare-pages/assets/
+├── app.png (original 1360×1360)
+└── josvisser-logo.png (used in signature)
 ```
 
-### 2. Deploy to Cloudflare:
-- Push to GitHub (auto-deploys if connected)
-- Or use Wrangler CLI
-- Or upload via Cloudflare dashboard
+### 2. Already deployed to Cloudflare ✅
 
 ### 3. Verify:
-Visit: `https://static.josvisserict.nl/assets/logo.png`
+Visit: `https://static.josvisserict.nl/assets/josvisser-logo.png`
 
 Should display your logo ✅
 
@@ -193,27 +187,26 @@ Your current files are already excellent (~5KB), but if needed:
 
 ## Summary
 
-**New Setup:**
-- ✅ Single logo file: `logo.png`
+**Current Setup:**
+- ✅ Single logo file: `josvisser-logo.png` ✅
+- ✅ Original resolution: 1360×1360px
+- ✅ Displayed at: 240×240px in email
 - ✅ Works for light and dark themes
-- ✅ Simpler to maintain
-- ✅ Smaller deployment size
-- ✅ Same great compatibility
-
-**Old Setup (no longer needed):**
-- ❌ logo-light.png
-- ❌ logo-dark.png
-- ❌ Complex switching logic
+- ✅ Orange branding (#f6a000)
+- ✅ Clean and simple
 
 ---
 
-## Next Steps
+## ✅ All Set!
 
-1. Choose which logo to use (or create new one)
-2. Rename/save as `logo.png`
-3. Place in `cloudflare-pages/assets/`
-4. Deploy to Cloudflare
-5. Signature will automatically use the new logo!
+Your logo is already configured and working:
+
+1. ✅ Logo uploaded: `josvisser-logo.png`
+2. ✅ Deployed to Cloudflare
+3. ✅ Signature uses correct URL
+4. ✅ Working in email signature
+
+**To update logo:** Replace `app.png` or `josvisser-logo.png` in `cloudflare-pages/assets/` and redeploy.
 
 ---
 

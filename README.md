@@ -15,19 +15,21 @@ Professional email signature with dark/light mode support and Cloudflare Pages d
 
 ---
 
-## 🚀 Quick Start
+## ✅ Status: Ready to Use!
 
-### 1. Add Your Logos
-Place `logo-light.png` and `logo-dark.png` in `cloudflare-pages/assets/`
+Your signature is fully configured and working:
 
-### 2. Deploy to Cloudflare Pages
-Connect this repo to [Cloudflare Pages](https://pages.cloudflare.com)
+### 1. Logo ✅
+`josvisser-logo.png` deployed at `https://static.josvisserict.nl/assets/josvisser-logo.png`
 
-### 3. Update Signature
-Replace `YOUR_HOSTING_URL` in `signature.html` with your Cloudflare URL
+### 2. Cloudflare Pages ✅
+Connected to `static.josvisserict.nl` with proper CORS headers
+
+### 3. Signature Files ✅
+Use `signature-new-layout-with-disclaimer.html` (includes Dutch disclaimer)
 
 ### 4. Install in Email Client
-Copy `signature.html` content and paste into your email client
+Open `signature-new-preview.html` in browser, copy, and paste into Mail
 
 ---
 
@@ -50,16 +52,18 @@ Copy `signature.html` content and paste into your email client
 
 ```
 Email_Signature_JosVisserICT/
-├── signature.html              # Main signature file
-├── signature-simple.html       # Simplified version
-├── preview.html                # Preview page
-├── cloudflare-pages/          # Deploy this folder
-│   ├── assets/                # ADD YOUR LOGOS HERE! ⭐
-│   │   ├── logo-light.png    (dark logo for light mode)
-│   │   └── logo-dark.png     (light logo for dark mode)
-│   ├── index.html             # Asset hosting page
-│   └── _headers               # CORS configuration
-└── wiki/                      # Wiki content (see GitHub Wiki)
+├── signature-new-layout.html                  # Signature without disclaimer
+├── signature-new-layout-with-disclaimer.html  # Signature with disclaimer ⭐
+├── signature-new-preview.html                 # Preview page
+├── cloudflare-pages/                         # Deploy this folder
+│   ├── assets/
+│   │   ├── app.png                           # Original logo (1360×1360)
+│   │   └── josvisser-logo.png               # Used in signature ✅
+│   ├── index.html                            # Asset hosting page
+│   ├── privacy.html                          # Privacy policy
+│   └── _headers                              # CORS configuration
+├── disclaimers/                              # Standalone disclaimers
+└── wiki/                                     # Wiki content (see GitHub Wiki)
 ```
 
 ---
