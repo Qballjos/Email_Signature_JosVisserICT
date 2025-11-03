@@ -102,18 +102,6 @@ Email_Signature_JosVisserICT/
 
 ---
 
-## 📞 Contact Information
-
-**Jos Visser**  
-ICT Specialist
-
-📧 info@josvisserict.nl  
-📱 +31 (0)6 124 159 90  
-🌐 [josvisserict.nl](https://josvisserict.nl)  
-📍 Spijkmanstraat 86, 7009 HS Doetinchem, Nederland
-
----
-
 ## 🌐 Live URLs
 
 | Resource | URL | Status |
