@@ -22,6 +22,8 @@ Complete brand asset system with email signature, logo variants, and legal pages
 ### Brand Kit
 - 🎨 **Modern dark/light theme** - Asset hosting met auto theme detect
 - 🖼️ **Multiple logo variants** - Full Colour, Black, App Icon, Favicon, Artboard
+- 🎨 **Contact Icons pack** - 6 SVG iconen in brand kleur (#ea8b39)
+- 📋 **One-click download** - Download SVG iconen direct
 - 📋 **One-click copy** - Copy buttons bij elke URL
 - 🔗 **Direct preview** - Klikbare URLs openen in nieuwe tab
 - ⚡ **Real-time updates** - Live status monitoring
@@ -108,6 +110,20 @@ Visit the Brand Kit: `https://static.josvisserict.nl`
 | **Favicon** | `josvisser-logo-favicon.png` | Website favicon |
 | **Artboard** | `josvisser-logo-artboard.png` | Design artboard |
 | **Legacy** | `josvisser-logo.png` | Email signature (1360×1360px) |
+
+### Contact Icons Pack
+| Icon | Bestand | Gebruik |
+|------|---------|---------|
+| **Phone** | `josvisser-icon-phone.svg` | Telefoon contact |
+| **Email** | `josvisser-icon-email.svg` | Email contact |
+| **Website** | `josvisser-icon-website.svg` | Website/globe |
+| **Location** | `josvisser-icon-location.svg` | Adres/locatie |
+| **LinkedIn** | `josvisser-icon-linkedin.svg` | Social media |
+| **GitHub** | `josvisser-icon-github.svg` | Developer/code |
+
+**Kleur:** #ea8b39 (brand orange)  
+**Formaat:** SVG (24×24px, schaalbaar)  
+**Download:** Via Brand Kit met one-click buttons
 
 ### Email Signature Specs
 - **Logo size:** 90×90px (displayed), 1360×1360px (source)
@@ -268,12 +284,14 @@ Professional email signature + Brand Kit hosting + Legal pages = Complete soluti
 
 **Features Overzicht:**
 - ✅ 6 logo varianten (URL-vriendelijke bestandsnamen)
+- ✅ 6 contact icons (SVG in brand kleur #ea8b39)
 - ✅ Email signature copy functionaliteit
+- ✅ One-click SVG icon downloads
 - ✅ Favicon op alle pagina's
 - ✅ Apple Touch Icon support
 - ✅ Privacy & Terms pages (NL + EN)
 - ✅ Taal-switcher op alle legal pagina's
-- ✅ Auto theme detect (🔄 volgt systeem dark/light mode)
+- ✅ Auto theme detect (⚙️ volgt systeem dark/light mode)
 - ✅ 3-state theme toggle (Auto/Light/Dark) op alle 6 pagina's
 - ✅ Real-time systeem thema sync
 - ✅ Custom 404 error page (branded met theme support)
