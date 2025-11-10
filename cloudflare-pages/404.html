@@ -23,6 +23,96 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        
+        /* Light Mode Styles */
+        body.light-mode {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8edf2 100%);
+            color: #333;
+        }
+        
+        body.light-mode .container {
+            color: #333;
+        }
+        
+        body.light-mode .error-code {
+            background: linear-gradient(135deg, #ea8b39 0%, #ffa500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        body.light-mode h1 {
+            color: #333;
+        }
+        
+        body.light-mode p {
+            color: #666;
+        }
+        
+        body.light-mode .btn-secondary {
+            background: white;
+            border-color: #e5e7eb;
+            color: #333;
+        }
+        
+        body.light-mode .btn-secondary:hover {
+            background: #f9fafb;
+            border-color: #ea8b39;
+        }
+        
+        body.light-mode .suggestions {
+            border-top-color: #e5e7eb;
+        }
+        
+        body.light-mode .suggestions h2 {
+            color: #ea8b39;
+        }
+        
+        body.light-mode .links a {
+            color: #666;
+        }
+        
+        body.light-mode .links a:hover {
+            color: #ea8b39;
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.2s;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #ea8b39;
+        }
+        
+        body.light-mode .theme-toggle {
+            background: white;
+            border-color: #e5e7eb;
+            color: #666;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        body.light-mode .theme-toggle:hover {
+            background: #f5f5f5;
+            border-color: #ea8b39;
         }
         
         .container {
@@ -189,10 +279,19 @@
             .btn {
                 width: 100%;
             }
+            
+            .theme-toggle {
+                top: 10px;
+                right: 10px;
+            }
         }
     </style>
 </head>
 <body>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span class="theme-icon">☀️</span>
+    </button>
+
     <div class="container">
         <div class="logo">
             <img src="/assets/josvisser-logo-app-icon.png" alt="Jos Visser ICT">
@@ -222,6 +321,77 @@
             </div>
         </div>
     </div>
+    
+    <script>
+        // Theme toggle met auto-detect
+        function toggleTheme() {
+            const currentTheme = localStorage.getItem('brandkit-theme');
+            let newTheme;
+            
+            if (!currentTheme || currentTheme === 'auto') {
+                // Van auto naar light
+                newTheme = 'light';
+                document.body.classList.add('light-mode');
+            } else if (currentTheme === 'light') {
+                // Van light naar dark
+                newTheme = 'dark';
+                document.body.classList.remove('light-mode');
+            } else {
+                // Van dark naar auto
+                newTheme = 'auto';
+                applySystemTheme();
+            }
+            
+            localStorage.setItem('brandkit-theme', newTheme);
+            updateThemeIcon();
+        }
+        
+        function applySystemTheme() {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (prefersDark) {
+                document.body.classList.remove('light-mode');
+            } else {
+                document.body.classList.add('light-mode');
+            }
+        }
+        
+        function updateThemeIcon() {
+            const icon = document.querySelector('.theme-icon');
+            const savedTheme = localStorage.getItem('brandkit-theme');
+            
+            if (savedTheme === 'light') {
+                icon.textContent = '🌙';
+            } else if (savedTheme === 'dark') {
+                icon.textContent = '☀️';
+            } else {
+                icon.textContent = '🔄'; // Auto mode
+            }
+        }
+        
+        // Initialize theme
+        (function() {
+            const savedTheme = localStorage.getItem('brandkit-theme');
+            
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+            } else if (savedTheme === 'dark') {
+                document.body.classList.remove('light-mode');
+            } else {
+                // Auto mode: volg systeem
+                applySystemTheme();
+            }
+            
+            updateThemeIcon();
+            
+            // Listen voor systeem thema changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                const savedTheme = localStorage.getItem('brandkit-theme');
+                if (!savedTheme || savedTheme === 'auto') {
+                    applySystemTheme();
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
 
