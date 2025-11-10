@@ -37,6 +37,137 @@
             color: #ffffff;
             padding: 40px 20px;
             line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        /* Light Mode Styles */
+        body.light-mode {
+            background: #f5f5f5;
+            color: #333;
+        }
+        
+        body.light-mode .container {
+            color: #333;
+        }
+        
+        body.light-mode h1 {
+            background: linear-gradient(135deg, #ea8b39 0%, #ffa500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        body.light-mode .subtitle {
+            color: #666;
+        }
+        
+        body.light-mode .section {
+            background: white;
+            border-color: #e5e7eb;
+        }
+        
+        body.light-mode .section h2 {
+            color: #ea8b39;
+        }
+        
+        body.light-mode .asset-card {
+            background: #fafafa;
+            border-color: #e5e7eb;
+        }
+        
+        body.light-mode .asset-card:hover {
+            background: white;
+            border-color: #ea8b39;
+        }
+        
+        body.light-mode .asset-card h3 {
+            color: #333;
+        }
+        
+        body.light-mode .asset-card p {
+            color: #666;
+        }
+        
+        body.light-mode .asset-card code {
+            background: rgba(234, 139, 57, 0.1);
+            border-color: rgba(234, 139, 57, 0.2);
+            color: #ea8b39;
+        }
+        
+        body.light-mode .asset-preview {
+            background: #f9fafb;
+            border-color: #e5e7eb;
+        }
+        
+        body.light-mode .copy-btn {
+            background: rgba(234, 139, 57, 0.1);
+            border-color: rgba(234, 139, 57, 0.2);
+            color: #ea8b39;
+        }
+        
+        body.light-mode .copy-btn:hover {
+            background: rgba(234, 139, 57, 0.2);
+        }
+        
+        body.light-mode .signature-preview {
+            background: white;
+            border-color: rgba(234, 139, 57, 0.3);
+        }
+        
+        body.light-mode .preview-instructions {
+            background: rgba(234, 139, 57, 0.1);
+            border-color: rgba(234, 139, 57, 0.3);
+            color: #ea8b39;
+        }
+        
+        body.light-mode .preview-instructions strong {
+            color: #ea8b39;
+        }
+        
+        body.light-mode .footer {
+            border-top-color: #e5e7eb;
+            color: #6b7280;
+        }
+        
+        body.light-mode .update-time {
+            background: #f0f0f0;
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.2s;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #ea8b39;
+        }
+        
+        body.light-mode .theme-toggle {
+            background: white;
+            border-color: #e5e7eb;
+            color: #666;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        body.light-mode .theme-toggle:hover {
+            background: #f5f5f5;
+            border-color: #ea8b39;
         }
         
         .container {
@@ -307,10 +438,19 @@
             .grid {
                 grid-template-columns: 1fr;
             }
+            
+            .theme-toggle {
+                top: 10px;
+                right: 10px;
+            }
         }
     </style>
 </head>
 <body>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span class="theme-icon">☀️</span>
+    </button>
+
     <div class="container">
         <div class="header">
             <div class="logo-display">
@@ -574,6 +714,29 @@
         
         updateTime();
         setInterval(updateTime, 1000);
+        
+        // Theme toggle functionaliteit
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            const isLight = document.body.classList.contains('light-mode');
+            localStorage.setItem('brandkit-theme', isLight ? 'light' : 'dark');
+            updateThemeIcon();
+        }
+        
+        function updateThemeIcon() {
+            const icon = document.querySelector('.theme-icon');
+            const isLight = document.body.classList.contains('light-mode');
+            icon.textContent = isLight ? '🌙' : '☀️';
+        }
+        
+        // Check saved theme preference
+        (function() {
+            const savedTheme = localStorage.getItem('brandkit-theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+                updateThemeIcon();
+            }
+        })();
         
         // Copy to clipboard functie
         function copyToClipboard(text, button) {
