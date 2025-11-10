@@ -76,22 +76,21 @@
         
         .theme-toggle {
             background: white;
-            padding: 8px;
-            border-radius: 8px;
+            padding: 8px 16px;
+            border-radius: 6px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             cursor: pointer;
             border: none;
-            font-size: 20px;
+            font-size: 16px;
             transition: all 0.2s;
-            width: 44px;
-            height: 44px;
+            font-weight: 600;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         
         .theme-toggle:hover {
-            transform: scale(1.05);
+            background: #f5f5f5;
         }
         
         /* Dark Mode Styles */
@@ -109,6 +108,10 @@
         body.dark-mode .theme-toggle {
             background: #2a2a2a;
             box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        
+        body.dark-mode .theme-toggle:hover {
+            background: #3a3a3a;
         }
         
         body.dark-mode .language-switcher a {
