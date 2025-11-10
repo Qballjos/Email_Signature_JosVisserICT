@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>Email Signature Assets - Jos Visser ICT</title>
+    <title>Brand Kit - Jos Visser ICT</title>
     <style>
         * {
             margin: 0;
@@ -14,114 +14,409 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
+            background: #0f0f0f;
+            color: #ffffff;
+            padding: 40px 20px;
+            line-height: 1.6;
         }
         
         .container {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            max-width: 600px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .logo-display {
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+        
+        .logo-display img {
+            width: 120px;
+            height: 120px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(234, 139, 57, 0.3);
         }
         
         h1 {
-            color: #f6a000;
-            margin-bottom: 20px;
-            font-size: 32px;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #ea8b39 0%, #ffa500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
-        p {
-            color: #4b5563;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        
-        .assets-list {
-            background: #f9fafb;
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 30px;
-        }
-        
-        .assets-list h2 {
-            color: #1f2937;
+        .subtitle {
+            color: #999;
             font-size: 18px;
-            margin-bottom: 15px;
+            margin-bottom: 30px;
         }
         
-        .asset-item {
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #10b981;
+            font-weight: 500;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #ea8b39;
             display: flex;
             align-items: center;
-            padding: 10px;
-            background: white;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #e5e7eb;
+            gap: 10px;
         }
         
-        .asset-item code {
-            background: #f3f4f6;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 13px;
-            color: #f6a000;
-            font-family: 'Courier New', monospace;
+        .section h2::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(180deg, #ea8b39 0%, rgba(234, 139, 57, 0.3) 100%);
+            border-radius: 2px;
         }
         
-        .status {
-            display: inline-block;
-            padding: 4px 12px;
-            background: #10b981;
-            color: white;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .asset-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .asset-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #ea8b39;
+            transform: translateY(-2px);
+        }
+        
+        .asset-card h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        
+        .asset-card p {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 12px;
+        }
+        
+        .asset-card code {
+            display: block;
+            background: rgba(234, 139, 57, 0.1);
+            border: 1px solid rgba(234, 139, 57, 0.2);
+            padding: 10px;
+            border-radius: 6px;
             font-size: 12px;
-            font-weight: 600;
-            margin-left: auto;
+            color: #ea8b39;
+            font-family: 'Courier New', monospace;
+            word-break: break-all;
+        }
+        
+        .url-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .url-container code {
+            flex: 1;
+            margin: 0;
+        }
+        
+        .copy-btn {
+            background: rgba(234, 139, 57, 0.2);
+            border: 1px solid rgba(234, 139, 57, 0.3);
+            color: #ea8b39;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 12px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        
+        .copy-btn:hover {
+            background: rgba(234, 139, 57, 0.3);
+            border-color: #ea8b39;
+        }
+        
+        .copy-btn:active {
+            transform: scale(0.95);
+        }
+        
+        .copy-btn.copied {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: rgba(16, 185, 129, 0.3);
+            color: #10b981;
+        }
+        
+        .asset-preview {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 12px;
+            min-height: 100px;
+        }
+        
+        .asset-preview img {
+            max-width: 80px;
+            max-height: 80px;
+            border-radius: 8px;
         }
         
         .footer {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 2px solid #e5e7eb;
-            color: #6b7280;
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #666;
             font-size: 14px;
+        }
+        
+        .update-time {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            background: linear-gradient(135deg, #ea8b39 0%, #ffa500 100%);
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(234, 139, 57, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📧 Email Signature Assets</h1>
-        <p>This page hosts the assets for Jos Visser ICT email signature.</p>
-        <p>These assets are optimized for email clients and are served with appropriate CORS headers for maximum compatibility.</p>
-        
-        <div class="assets-list">
-            <h2>Available Assets</h2>
-            <div class="asset-item">
-                <code>/assets/josvisser-logo.png</code>
-                <span class="status">Active</span>
+        <div class="header">
+            <div class="logo-display">
+                <img src="/assets/josvisser-logo.png" alt="Jos Visser ICT Logo">
             </div>
-            <div class="asset-item">
-                <code>/privacy.html</code>
-                <span class="status">Active</span>
+            <h1>Brand Kit</h1>
+            <p class="subtitle">Real-time service monitoring</p>
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                All Systems Operational
             </div>
         </div>
-        
-        <div style="margin-top: 20px; padding: 15px; background: #fff3cd; border-radius: 8px; border-left: 4px solid #f6a000;">
-            <p style="margin: 0; font-size: 14px;"><strong>Logo Info:</strong> High-resolution 1360×1360px logo, displayed at 240×240px in email signature. Works for both light and dark themes with orange branding (#f6a000).</p>
+
+        <!-- Logo's & Documenten -->
+        <div class="section">
+            <h2>Logo's & Documenten</h2>
+            <div class="grid">
+                <div class="asset-card">
+                    <div class="asset-preview">
+                        <img src="/assets/josvisser-logo.png" alt="Jos Visser ICT Logo">
+                    </div>
+                    <h3>Hoofdlogo</h3>
+                    <p>High-resolution PNG • 1360×1360px</p>
+                    <div class="url-container">
+                        <code>https://static.josvisserict.nl/assets/josvisser-logo.png</code>
+                        <button class="copy-btn" onclick="copyToClipboard('https://static.josvisserict.nl/assets/josvisser-logo.png', this)">📋 Copy</button>
+                    </div>
+                </div>
+                
+                <div class="asset-card">
+                    <div class="asset-preview">
+                        <img src="/assets/app.png" alt="App Logo">
+                    </div>
+                    <h3>App Logo</h3>
+                    <p>Application icon • 1360×1360px</p>
+                    <div class="url-container">
+                        <code>https://static.josvisserict.nl/assets/app.png</code>
+                        <button class="copy-btn" onclick="copyToClipboard('https://static.josvisserict.nl/assets/app.png', this)">📋 Copy</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        
+
+        <!-- Email Assets -->
+        <div class="section">
+            <h2>Email Signature Assets</h2>
+            <div class="grid">
+                <div class="asset-card">
+                    <h3>Email Logo</h3>
+                    <p>Geoptimaliseerd voor email handtekening</p>
+                    <div class="url-container">
+                        <code>https://static.josvisserict.nl/assets/josvisser-logo.png</code>
+                        <button class="copy-btn" onclick="copyToClipboard('https://static.josvisserict.nl/assets/josvisser-logo.png', this)">📋 Copy</button>
+                    </div>
+                </div>
+                
+                <div class="asset-card">
+                    <h3>Handtekening Template</h3>
+                    <p>Inclusief NAW-gegevens en disclaimer</p>
+                    <div class="url-container">
+                        <code>signature-final.html</code>
+                        <button class="copy-btn" onclick="copyToClipboard('signature-final.html', this)">📋 Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagina's -->
+        <div class="section">
+            <h2>Pagina's</h2>
+            <div class="grid">
+                <div class="asset-card">
+                    <h3>Privacyverklaring</h3>
+                    <p>AVG/GDPR compliant privacy policy</p>
+                    <div class="url-container">
+                        <code>https://static.josvisserict.nl/privacy.html</code>
+                        <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/privacy.html', this)">📋 Copy</button>
+                    </div>
+                    <button class="btn" onclick="window.open('/privacy.html', '_blank')" style="width: 100%; margin-top: 10px;">Open Pagina</button>
+                </div>
+                
+                <div class="asset-card">
+                    <h3>Brand Assets</h3>
+                    <p>Centrale asset hosting pagina</p>
+                    <div class="url-container">
+                        <code>https://static.josvisserict.nl/</code>
+                        <button class="copy-btn" onclick="copyToClipboard('https://static.josvisserict.nl/', this)">📋 Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technische Specificaties -->
+        <div class="section">
+            <h2>Technische Specificaties</h2>
+            <div style="background: rgba(255, 255, 255, 0.03); border-radius: 8px; padding: 20px;">
+                <ul style="list-style: none; color: #999;">
+                    <li style="margin-bottom: 10px;">✅ <strong style="color: #fff;">Format:</strong> PNG met transparante achtergrond</li>
+                    <li style="margin-bottom: 10px;">✅ <strong style="color: #fff;">Afmetingen:</strong> 1360×1360 pixels (vierkant)</li>
+                    <li style="margin-bottom: 10px;">✅ <strong style="color: #fff;">Email weergave:</strong> 90×90 pixels</li>
+                    <li style="margin-bottom: 10px;">✅ <strong style="color: #fff;">Bestandsgrootte:</strong> 56KB</li>
+                    <li style="margin-bottom: 10px;">✅ <strong style="color: #fff;">Kleurenschema:</strong> Oranje (#ea8b39)</li>
+                    <li>✅ <strong style="color: #fff;">CORS:</strong> Correct geconfigureerd voor email clients</li>
+                </ul>
+            </div>
+        </div>
+
         <div class="footer">
             <p><strong>Jos Visser ICT</strong></p>
-            <p>Spijkmanstraat 86, 7009 HS Doetinchem, Nederland</p>
-            <p>📧 info@josvisserict.nl | 🌐 <a href="https://josvisserict.nl" style="color: #f6a000; text-decoration: none;">josvisserict.nl</a></p>
+            <p>Spijkmanstraat 86 • 7009 HS Doetinchem • Nederland</p>
+            <p>
+                <a href="mailto:info@josvisserict.nl" style="color: #ea8b39; text-decoration: none;">info@josvisserict.nl</a> • 
+                <a href="https://josvisserict.nl" style="color: #ea8b39; text-decoration: none;">josvisserict.nl</a>
+            </p>
+            <div class="update-time">
+                Laatste update: <span id="updateTime">--:--:--</span>
+            </div>
+            <button class="btn" onclick="location.reload()">Ververs Status</button>
         </div>
     </div>
+
+    <script>
+        // Update tijd weergeven
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('nl-NL');
+            document.getElementById('updateTime').textContent = timeString;
+        }
+        
+        updateTime();
+        setInterval(updateTime, 1000);
+        
+        // Copy to clipboard functie
+        function copyToClipboard(text, button) {
+            navigator.clipboard.writeText(text).then(function() {
+                // Verander button text en styling
+                const originalText = button.innerHTML;
+                button.innerHTML = '✅ Gekopieerd!';
+                button.classList.add('copied');
+                
+                // Reset na 2 seconden
+                setTimeout(function() {
+                    button.innerHTML = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Kon niet kopiëren: ', err);
+                button.innerHTML = '❌ Fout';
+                setTimeout(function() {
+                    button.innerHTML = '📋 Copy';
+                }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>
 
