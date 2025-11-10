@@ -34,6 +34,7 @@ Complete brand asset system with email signature, logo variants, and legal pages
 - 📜 **Algemene Voorwaarden** - Terms of Use pagina
 - 🌍 **Meertalig** - Nederlands + Engels met taal-switcher
 - 🔄 **Taal-switcher** - Fixed NL/EN toggle rechts boven
+- 🌙 **Dark mode** - Toggle op alle legal pagina's met localStorage
 - 🍪 **Cookie compliance** - Optionele consent banner beschikbaar
 - 🌐 **Global CDN** - Fast loading via `static.josvisserict.nl`
 
@@ -195,6 +196,7 @@ Email_Signature_JosVisserICT/
 ✅ **Privacy Policy** - Volledige AVG/GDPR compliant privacyverklaring (NL + EN)  
 ✅ **Terms of Use** - Algemene voorwaarden (NL + EN)  
 ✅ **Language Switcher** - Easy NL ↔ EN toggle op alle legal pagina's  
+✅ **Dark Mode** - Theme toggle met localStorage persistence  
 ✅ **No tracking** - Geen analytics of marketing cookies  
 ✅ **Secure** - HTTPS met Cloudflare SSL  
 ✅ **Transparent** - Duidelijke informatie over gegevensverwerking  
@@ -252,6 +254,7 @@ Professional email signature + Brand Kit hosting + Legal pages = Complete soluti
 - ✅ Apple Touch Icon support
 - ✅ Privacy & Terms pages (NL + EN)
 - ✅ Taal-switcher op alle legal pagina's
+- ✅ Dark mode toggle (🌙/☀️) met localStorage
 - ✅ Custom 404 error page (branded)
 - ✅ Open Graph & Twitter Cards (social sharing)
 - ✅ SEO meta descriptions
