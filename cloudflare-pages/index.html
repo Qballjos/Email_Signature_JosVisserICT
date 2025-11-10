@@ -153,6 +153,35 @@
             color: #ea8b39;
             font-family: 'Courier New', monospace;
             word-break: break-all;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .asset-card code:hover {
+            background: rgba(234, 139, 57, 0.15);
+            border-color: #ea8b39;
+        }
+        
+        .signature-preview {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 30px;
+            border: 2px dashed rgba(234, 139, 57, 0.3);
+            margin-bottom: 20px;
+        }
+        
+        .preview-instructions {
+            background: rgba(234, 139, 57, 0.1);
+            border: 1px solid rgba(234, 139, 57, 0.3);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            color: #ea8b39;
+            font-size: 14px;
+        }
+        
+        .preview-instructions strong {
+            color: #ffa500;
         }
         
         .url-container {
@@ -266,7 +295,7 @@
     <div class="container">
         <div class="header">
             <div class="logo-display">
-                <img src="/assets/josvisser-logo.png" alt="Jos Visser ICT Logo">
+                <img src="/assets/Jos Visser ICT_Full Colour.png" alt="Jos Visser ICT Logo">
             </div>
             <h1>Brand Kit</h1>
             <p class="subtitle">Real-time service monitoring</p>
@@ -282,52 +311,174 @@
             <div class="grid">
                 <div class="asset-card">
                     <div class="asset-preview">
-                        <img src="/assets/josvisser-logo.png" alt="Jos Visser ICT Logo">
+                        <img src="/assets/Jos Visser ICT_Full Colour.png" alt="Jos Visser ICT Full Colour">
                     </div>
-                    <h3>Hoofdlogo</h3>
-                    <p>High-resolution PNG • 1360×1360px</p>
+                    <h3>Full Colour Logo</h3>
+                    <p>Volledige kleurversie</p>
                     <div class="url-container">
-                        <code>https://static.josvisserict.nl/assets/josvisser-logo.png</code>
-                        <button class="copy-btn" onclick="copyToClipboard('https://static.josvisserict.nl/assets/josvisser-logo.png', this)">📋 Copy</button>
+                        <code onclick="window.open('https://static.josvisserict.nl/assets/Jos%20Visser%20ICT_Full%20Colour.png', '_blank')">https://static.josvisserict.nl/assets/Jos%20Visser%20ICT_Full%20Colour.png</code>
+                        <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/assets/Jos%20Visser%20ICT_Full%20Colour.png', this)">📋 Copy</button>
+                    </div>
+                </div>
+                
+                <div class="asset-card">
+                    <div class="asset-preview" style="background: white;">
+                        <img src="/assets/Jos Visser ICT_Black.png" alt="Jos Visser ICT Black">
+                    </div>
+                    <h3>Black Logo</h3>
+                    <p>Zwarte versie voor lichte achtergronden</p>
+                    <div class="url-container">
+                        <code onclick="window.open('https://static.josvisserict.nl/assets/Jos%20Visser%20ICT_Black.png', '_blank')">https://static.josvisserict.nl/assets/Jos%20Visser%20ICT_Black.png</code>
+                        <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/assets/Jos%20Visser%20ICT_Black.png', this)">📋 Copy</button>
                     </div>
                 </div>
                 
                 <div class="asset-card">
                     <div class="asset-preview">
-                        <img src="/assets/app.png" alt="App Logo">
+                        <img src="/assets/Jos Visser ICT_App icon.png" alt="Jos Visser ICT App Icon">
                     </div>
-                    <h3>App Logo</h3>
-                    <p>Application icon • 1360×1360px</p>
+                    <h3>App Icon</h3>
+                    <p>Application icon formaat</p>
                     <div class="url-container">
-                        <code>https://static.josvisserict.nl/assets/app.png</code>
-                        <button class="copy-btn" onclick="copyToClipboard('https://static.josvisserict.nl/assets/app.png', this)">📋 Copy</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Email Assets -->
-        <div class="section">
-            <h2>Email Signature Assets</h2>
-            <div class="grid">
-                <div class="asset-card">
-                    <h3>Email Logo</h3>
-                    <p>Geoptimaliseerd voor email handtekening</p>
-                    <div class="url-container">
-                        <code>https://static.josvisserict.nl/assets/josvisser-logo.png</code>
-                        <button class="copy-btn" onclick="copyToClipboard('https://static.josvisserict.nl/assets/josvisser-logo.png', this)">📋 Copy</button>
+                        <code onclick="window.open('https://static.josvisserict.nl/assets/Jos%20Visser%20ICT_App%20icon.png', '_blank')">https://static.josvisserict.nl/assets/Jos%20Visser%20ICT_App%20icon.png</code>
+                        <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/assets/Jos%20Visser%20ICT_App%20icon.png', this)">📋 Copy</button>
                     </div>
                 </div>
                 
                 <div class="asset-card">
-                    <h3>Handtekening Template</h3>
-                    <p>Inclusief NAW-gegevens en disclaimer</p>
+                    <div class="asset-preview">
+                        <img src="/assets/Jos Visser ICT_Favicon.png" alt="Jos Visser ICT Favicon">
+                    </div>
+                    <h3>Favicon</h3>
+                    <p>Website favicon formaat</p>
                     <div class="url-container">
-                        <code>signature-final.html</code>
-                        <button class="copy-btn" onclick="copyToClipboard('signature-final.html', this)">📋 Copy</button>
+                        <code onclick="window.open('https://static.josvisserict.nl/assets/Jos%20Visser%20ICT_Favicon.png', '_blank')">https://static.josvisserict.nl/assets/Jos%20Visser%20ICT_Favicon.png</code>
+                        <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/assets/Jos%20Visser%20ICT_Favicon.png', this)">📋 Copy</button>
+                    </div>
+                </div>
+                
+                <div class="asset-card">
+                    <div class="asset-preview">
+                        <img src="/assets/josvisser-logo.png" alt="Jos Visser ICT Logo">
+                    </div>
+                    <h3>Hoofdlogo (Oud)</h3>
+                    <p>High-resolution PNG • 1360×1360px</p>
+                    <div class="url-container">
+                        <code onclick="window.open('https://static.josvisserict.nl/assets/josvisser-logo.png', '_blank')">https://static.josvisserict.nl/assets/josvisser-logo.png</code>
+                        <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/assets/josvisser-logo.png', this)">📋 Copy</button>
+                    </div>
+                </div>
+                
+                <div class="asset-card">
+                    <div class="asset-preview">
+                        <img src="/assets/Jos Visser ICT_Tekengebied 1.png" alt="Jos Visser ICT Artboard">
+                    </div>
+                    <h3>Tekengebied</h3>
+                    <p>Design artboard versie</p>
+                    <div class="url-container">
+                        <code onclick="window.open('https://static.josvisserict.nl/assets/Jos%20Visser%20ICT_Tekengebied%201.png', '_blank')">https://static.josvisserict.nl/assets/Jos%20Visser%20ICT_Tekengebied%201.png</code>
+                        <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/assets/Jos%20Visser%20ICT_Tekengebied%201.png', this)">📋 Copy</button>
                     </div>
                 </div>
             </div>
+        </div>
+        
+        <!-- Email Signature -->
+        <div class="section">
+            <h2>Email Signature</h2>
+            <div class="preview-instructions">
+                <strong>📋 Installatie:</strong> Selecteer de handtekening hieronder (hele grijze box) → Cmd+A → Cmd+C → Plak in je email client
+            </div>
+            <div class="signature-preview" id="signaturePreview">
+                <!-- Email Signature for Jos Visser -->
+                <table cellpadding="0" cellspacing="0" border="0" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #333333; max-width: 600px; border-collapse: collapse;">
+                    <tr>
+                        <td style="padding: 20px 0;">
+                            <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                                <tr>
+                                    <!-- Logo Column -->
+                                    <td style="vertical-align: middle; padding-right: 20px;">
+                                        <img src="https://static.josvisserict.nl/assets/josvisser-logo.png" alt="Jos Visser ICT" style="display: block; width: 90px; height: 90px; border: 0; border-radius: 12px;">
+                                    </td>
+                                    
+                                    <!-- Separator Line -->
+                                    <td style="vertical-align: middle; padding-right: 20px;">
+                                        <div style="width: 3px; height: 220px; background: linear-gradient(180deg, #ea8b39 0%, rgba(234, 139, 57, 0.3) 100%); border-radius: 10px;"></div>
+                                    </td>
+                                    
+                                    <!-- Contact Information Column -->
+                                    <td style="vertical-align: middle;">
+                                        <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                                            <!-- Name -->
+                                            <tr>
+                                                <td style="padding-bottom: 14px;">
+                                                    <a href="https://linkstack.josvisserict.nl" target="_blank" style="font-size: 20px; font-weight: 700; color: #1a1a1a; display: block; text-decoration: none;">Jos Visser</a>
+                                                </td>
+                                            </tr>
+                                            
+                                            <!-- Phone -->
+                                            <tr>
+                                                <td style="padding-bottom: 5px;">
+                                                    <a href="tel:+31612415990" style="color: #666666; text-decoration: none; font-size: 14px;">+31 (0)6 124 159 90</a>
+                                                </td>
+                                            </tr>
+                                            
+                                            <!-- Email -->
+                                            <tr>
+                                                <td style="padding-bottom: 5px;">
+                                                    <a href="mailto:info@josvisserict.nl" style="color: #666666; text-decoration: none; font-size: 14px;">info@josvisserict.nl</a>
+                                                </td>
+                                            </tr>
+                                            
+                                            <!-- Website -->
+                                            <tr>
+                                                <td style="padding-bottom: 14px;">
+                                                    <a href="https://josvisserict.nl" target="_blank" style="color: #666666; text-decoration: none; font-size: 14px;">josvisserict.nl</a>
+                                                </td>
+                                            </tr>
+                                            
+                                            <!-- Address -->
+                                            <tr>
+                                                <td>
+                                                    <span style="color: #666666; font-size: 14px; line-height: 1.6;">Spijkmanstraat 86<br>7009 HS Doetinchem<br>Nederland</span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- Disclaimer Section -->
+                    <tr>
+                        <td style="border-top: 1px solid #e0e0e0; padding-top: 14px; padding-bottom: 10px;">
+                            <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                                <tr>
+                                    <td>
+                                        <p style="margin: 0 0 10px 0; font-size: 11px; color: #999999; line-height: 1.6;">
+                                            <strong style="color: #666666;">Disclaimer:</strong> De informatie in dit e-mailbericht is vertrouwelijk en uitsluitend bestemd voor de geadresseerde. Indien u niet de beoogde ontvanger bent, verzoeken wij u vriendelijk dit bericht en eventuele bijlagen te verwijderen en de afzender hiervan op de hoogte te stellen.
+                                        </p>
+                                        
+                                        <p style="margin: 0 0 10px 0; font-size: 11px; color: #999999; line-height: 1.6;">
+                                            Jos Visser ICT aanvaardt geen aansprakelijkheid voor schade als gevolg van het gebruik van dit e-mailbericht en/of de inhoud daarvan.
+                                        </p>
+                                        
+                                        <p style="margin: 0 0 10px 0; font-size: 11px; color: #999999; line-height: 1.6;">
+                                            <strong style="color: #666666;">Privacy:</strong> Wij respecteren uw privacy en handelen conform de AVG/GDPR. Zie onze <a href="https://static.josvisserict.nl/privacy.html" style="color: #ea8b39; text-decoration: none;">privacyverklaring</a>.
+                                        </p>
+                                        
+                                        <p style="margin: 0; font-size: 11px; color: #999999; line-height: 1.6;">
+                                            <strong style="color: #666666;">Milieu:</strong> Denk aan het milieu voordat u deze e-mail afdrukt.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <button class="btn" onclick="copySignature()" style="width: 100%;">📋 Kopieer Handtekening</button>
         </div>
 
         <!-- Pagina's -->
@@ -338,38 +489,22 @@
                     <h3>Privacyverklaring</h3>
                     <p>AVG/GDPR compliant privacy policy</p>
                     <div class="url-container">
-                        <code>https://static.josvisserict.nl/privacy.html</code>
+                        <code onclick="window.open('https://static.josvisserict.nl/privacy.html', '_blank')">https://static.josvisserict.nl/privacy.html</code>
                         <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/privacy.html', this)">📋 Copy</button>
                     </div>
-                    <button class="btn" onclick="window.open('/privacy.html', '_blank')" style="width: 100%; margin-top: 10px;">Open Pagina</button>
                 </div>
                 
                 <div class="asset-card">
                     <h3>Brand Assets</h3>
                     <p>Centrale asset hosting pagina</p>
                     <div class="url-container">
-                        <code>https://static.josvisserict.nl/</code>
+                        <code onclick="window.open('https://static.josvisserict.nl/', '_blank')">https://static.josvisserict.nl/</code>
                         <button class="copy-btn" onclick="copyToClipboard('https://static.josvisserict.nl/', this)">📋 Copy</button>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Technische Specificaties -->
-        <div class="section">
-            <h2>Technische Specificaties</h2>
-            <div style="background: rgba(255, 255, 255, 0.03); border-radius: 8px; padding: 20px;">
-                <ul style="list-style: none; color: #999;">
-                    <li style="margin-bottom: 10px;">✅ <strong style="color: #fff;">Format:</strong> PNG met transparante achtergrond</li>
-                    <li style="margin-bottom: 10px;">✅ <strong style="color: #fff;">Afmetingen:</strong> 1360×1360 pixels (vierkant)</li>
-                    <li style="margin-bottom: 10px;">✅ <strong style="color: #fff;">Email weergave:</strong> 90×90 pixels</li>
-                    <li style="margin-bottom: 10px;">✅ <strong style="color: #fff;">Bestandsgrootte:</strong> 56KB</li>
-                    <li style="margin-bottom: 10px;">✅ <strong style="color: #fff;">Kleurenschema:</strong> Oranje (#ea8b39)</li>
-                    <li>✅ <strong style="color: #fff;">CORS:</strong> Correct geconfigureerd voor email clients</li>
-                </ul>
-            </div>
-        </div>
-
+        
         <div class="footer">
             <p><strong>Jos Visser ICT</strong></p>
             <p>Spijkmanstraat 86 • 7009 HS Doetinchem • Nederland</p>
@@ -416,7 +551,26 @@
                 }, 2000);
             });
         }
+        
+        // Copy signature functie
+        function copySignature() {
+            const signatureElement = document.getElementById('signaturePreview');
+            const range = document.createRange();
+            range.selectNode(signatureElement);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            
+            try {
+                document.execCommand('copy');
+                alert('✅ Handtekening gekopieerd! Plak deze nu in je email client.');
+            } catch (err) {
+                alert('❌ Kon handtekening niet kopiëren. Probeer handmatig te selecteren en kopiëren.');
+            }
+            
+            window.getSelection().removeAllRanges();
+        }
     </script>
 </body>
 </html>
+
 
