@@ -90,11 +90,11 @@ Visit the Brand Kit: `https://static.josvisserict.nl`
 ### Logo Variants
 | Variant | Bestand | Gebruik |
 |---------|---------|---------|
-| **Full Colour** | `Jos Visser ICT_Full Colour.png` | Primair gebruik |
-| **Black** | `Jos Visser ICT_Black.png` | Lichte achtergronden |
-| **App Icon** | `Jos Visser ICT_App icon.png` | Application icons |
-| **Favicon** | `Jos Visser ICT_Favicon.png` | Website favicon |
-| **Tekengebied** | `Jos Visser ICT_Tekengebied 1.png` | Design artboard |
+| **Full Colour** | `josvisser-logo-full-colour.png` | Primair gebruik |
+| **Black** | `josvisser-logo-black.png` | Lichte achtergronden |
+| **App Icon** | `josvisser-logo-app-icon.png` | Application icons |
+| **Favicon** | `josvisser-logo-favicon.png` | Website favicon |
+| **Artboard** | `josvisser-logo-artboard.png` | Design artboard |
 | **Legacy** | `josvisser-logo.png` | Email signature (1360×1360px) |
 
 ### Email Signature Specs
@@ -127,11 +127,11 @@ Email_Signature_JosVisserICT/
 ├── ☁️ CLOUDFLARE PAGES (static.josvisserict.nl)
 │   └── cloudflare-pages/
 │       ├── assets/                           Logo variants
-│       │   ├── Jos Visser ICT_Full Colour.png   ⭐ Primary
-│       │   ├── Jos Visser ICT_Black.png         Light backgrounds
-│       │   ├── Jos Visser ICT_App icon.png      App icons
-│       │   ├── Jos Visser ICT_Favicon.png       Favicon
-│       │   ├── Jos Visser ICT_Tekengebied 1.png Artboard
+│       │   ├── josvisser-logo-full-colour.png   ⭐ Primary
+│       │   ├── josvisser-logo-black.png         Light backgrounds
+│       │   ├── josvisser-logo-app-icon.png      App icons
+│       │   ├── josvisser-logo-favicon.png       Favicon
+│       │   ├── josvisser-logo-artboard.png      Artboard
 │       │   ├── josvisser-logo.png               Email signature
 │       │   └── app.png                          Original
 │       ├── index.html                        ⭐ Brand Kit pagina
@@ -158,8 +158,8 @@ Email_Signature_JosVisserICT/
 |----------|-----|--------|
 | **Brand Kit** | https://static.josvisserict.nl | ✅ Live |
 | **Email Logo** | https://static.josvisserict.nl/assets/josvisser-logo.png | ✅ Live |
-| **Full Colour Logo** | https://static.josvisserict.nl/assets/Jos%20Visser%20ICT_Full%20Colour.png | ✅ Live |
-| **Black Logo** | https://static.josvisserict.nl/assets/Jos%20Visser%20ICT_Black.png | ✅ Live |
+| **Full Colour Logo** | https://static.josvisserict.nl/assets/josvisser-logo-full-colour.png | ✅ Live |
+| **Black Logo** | https://static.josvisserict.nl/assets/josvisser-logo-black.png | ✅ Live |
 | **Privacy** | https://static.josvisserict.nl/privacy.html | ✅ Live |
 | **Terms** | https://static.josvisserict.nl/terms.html | ✅ Live |
 | **Repository** | https://github.com/Qballjos/Email_Signature_JosVisserICT | ✅ Public |
