@@ -28,8 +28,10 @@ Complete brand asset system with email signature, logo variants, and legal pages
 - 🌐 **Favicon support** - Brand consistency across alle pagina's
 
 ### Legal & Privacy
-- 🔒 **GDPR compliant** - Volledige privacyverklaring (AVG)
+- 🔒 **GDPR compliant** - Volledige privacyverklaring (AVG/GDPR)
 - 📜 **Algemene Voorwaarden** - Terms of Use pagina
+- 🌍 **Meertalig** - Nederlands + Engels met taal-switcher
+- 🔄 **Taal-switcher** - Fixed NL/EN toggle rechts boven
 - 🍪 **Cookie compliance** - Optionele consent banner beschikbaar
 - 🌐 **Global CDN** - Fast loading via `static.josvisserict.nl`
 
@@ -68,8 +70,10 @@ Visit the Brand Kit: `https://static.josvisserict.nl`
 | **`signature-final.html`** | Email signature HTML ⭐ |
 | **`signature-final-preview.html`** | Local preview page |
 | **`cloudflare-pages/index.html`** | Brand Kit hosting pagina |
-| **`cloudflare-pages/privacy.html`** | Privacyverklaring (GDPR) |
-| **`cloudflare-pages/terms.html`** | Algemene Voorwaarden |
+| **`cloudflare-pages/privacy.html`** | Privacyverklaring (NL) |
+| **`cloudflare-pages/privacy-en.html`** | Privacy Policy (EN) |
+| **`cloudflare-pages/terms.html`** | Algemene Voorwaarden (NL) |
+| **`cloudflare-pages/terms-en.html`** | Terms and Conditions (EN) |
 
 ---
 
@@ -136,8 +140,10 @@ Email_Signature_JosVisserICT/
 │       │   ├── josvisser-logo.png               Email signature
 │       │   └── app.png                          Original
 │       ├── index.html                        ⭐ Brand Kit pagina
-│       ├── privacy.html                      Privacyverklaring (GDPR)
-│       ├── terms.html                        Algemene Voorwaarden
+│       ├── privacy.html                      Privacyverklaring (NL)
+│       ├── privacy-en.html                   Privacy Policy (EN)
+│       ├── terms.html                        Algemene Voorwaarden (NL)
+│       ├── terms-en.html                     Terms and Conditions (EN)
 │       ├── cookie-consent.js                 Optional cookie banner
 │       ├── wrangler.toml                     Cloudflare config
 │       └── _headers                          CORS headers
@@ -161,8 +167,10 @@ Email_Signature_JosVisserICT/
 | **Email Logo** | https://static.josvisserict.nl/assets/josvisser-logo.png | ✅ Live |
 | **Full Colour Logo** | https://static.josvisserict.nl/assets/josvisser-logo-full-colour.png | ✅ Live |
 | **Black Logo** | https://static.josvisserict.nl/assets/josvisser-logo-black.png | ✅ Live |
-| **Privacy** | https://static.josvisserict.nl/privacy.html | ✅ Live |
-| **Terms** | https://static.josvisserict.nl/terms.html | ✅ Live |
+| **Privacy (NL)** | https://static.josvisserict.nl/privacy.html | ✅ Live |
+| **Privacy (EN)** | https://static.josvisserict.nl/privacy-en.html | ✅ Live |
+| **Terms (NL)** | https://static.josvisserict.nl/terms.html | ✅ Live |
+| **Terms (EN)** | https://static.josvisserict.nl/terms-en.html | ✅ Live |
 | **Repository** | https://github.com/Qballjos/Email_Signature_JosVisserICT | ✅ Public |
 
 ---
@@ -178,13 +186,15 @@ Email_Signature_JosVisserICT/
 
 ---
 
-## 🔒 GDPR Compliance
+## 🔒 GDPR Compliance & Multi-Language
 
-✅ **Privacy Policy** - Volledige AVG/GDPR compliant privacyverklaring  
-✅ **Terms of Use** - Nederlandse algemene voorwaarden  
+✅ **Privacy Policy** - Volledige AVG/GDPR compliant privacyverklaring (NL + EN)  
+✅ **Terms of Use** - Algemene voorwaarden (NL + EN)  
+✅ **Language Switcher** - Easy NL ↔ EN toggle op alle legal pagina's  
 ✅ **No tracking** - Geen analytics of marketing cookies  
 ✅ **Secure** - HTTPS met Cloudflare SSL  
-✅ **Transparent** - Duidelijke informatie over gegevensverwerking
+✅ **Transparent** - Duidelijke informatie over gegevensverwerking  
+✅ **International ready** - Support voor Nederlandse en internationale klanten
 
 ---
 
@@ -225,8 +235,10 @@ Professional email signature + Brand Kit hosting + Legal pages = Complete soluti
 
 **Quick Links:**
 - 🎨 [Brand Kit](https://static.josvisserict.nl) - Asset overview met copy functionaliteit
-- 🔒 [Privacy](https://static.josvisserict.nl/privacy.html) - AVG/GDPR compliant
-- 📜 [Terms](https://static.josvisserict.nl/terms.html) - Algemene Voorwaarden
+- 🇳🇱 [Privacy (NL)](https://static.josvisserict.nl/privacy.html) - AVG/GDPR compliant
+- 🇬🇧 [Privacy (EN)](https://static.josvisserict.nl/privacy-en.html) - GDPR compliant
+- 🇳🇱 [Terms (NL)](https://static.josvisserict.nl/terms.html) - Algemene Voorwaarden
+- 🇬🇧 [Terms (EN)](https://static.josvisserict.nl/terms-en.html) - Terms and Conditions
 - 📚 [Documentation Wiki](https://github.com/Qballjos/Email_Signature_JosVisserICT/wiki) - Complete docs
 
 **Features Overzicht:**
@@ -234,8 +246,10 @@ Professional email signature + Brand Kit hosting + Legal pages = Complete soluti
 - ✅ Email signature copy functionaliteit
 - ✅ Favicon op alle pagina's
 - ✅ Apple Touch Icon support
-- ✅ Privacy & Terms pages
+- ✅ Privacy & Terms pages (NL + EN)
+- ✅ Taal-switcher op alle legal pagina's
 - ✅ GDPR compliant (geen tracking)
+- ✅ Meertalige ondersteuning (Nederlands + Engels)
 - ✅ Cloudflare CDN hosting
 - ✅ Auto-deployment via GitHub
 - ✅ Mobile-responsive design
