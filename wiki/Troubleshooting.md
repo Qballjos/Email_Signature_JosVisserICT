@@ -1,549 +1,476 @@
 # 🆘 Troubleshooting
 
-Common issues and solutions for your email signature.
+Common issues and solutions for the Jos Visser ICT Brand Kit system.
 
-## Logo Issues
+## ✅ System Status
 
-### Logo Not Showing in Email
+**Your system is fully operational:**
+- 🎨 Brand Kit: https://static.josvisserict.nl ✅
+- 🖼️ All 6 logo variants: Deployed ✅
+- 📧 Email signature: Ready ✅
+- 🔒 Legal pages (NL + EN): Live ✅
+- 🎯 404 page: Active ✅
+
+**Quick test:** Visit https://static.josvisserict.nl - should load instantly
+
+---
+
+## Email Signature Issues
+
+### Logo Not Showing in Sent Email
 
 **Problem:** Logo doesn't appear when email is sent
 
-**Possible Causes:**
-1. Cloudflare deployment not complete
-2. Wrong URL in signature HTML
-3. Files not uploaded
-4. Recipient blocks external images
+**Quick Verification:**
+```
+✅ Test URL: https://static.josvisserict.nl/assets/josvisser-logo.png
+   Should display logo immediately in browser
+```
+
+**Most Common Cause:**
+Recipients have "Block external images" enabled in their email client.
 
 **Solutions:**
 
-✅ **Verify deployment:**
-- Visit your Cloudflare URL directly
-- Test: `https://your-url.pages.dev/assets/logo-light.png`
-- Should display the logo
+✅ **Your side (already done):**
+- Logo deployed ✅
+- HTTPS enabled ✅
+- CORS configured ✅
+- Valid PNG file ✅
 
-✅ **Check URL in HTML:**
-- Open `signature.html`
-- Find `YOUR_HOSTING_URL`
-- Replace with actual Cloudflare URL
-- Save and reinstall signature
+✅ **Recipient needs to:**
+- Click "Load external images" button in their email
+- Update security settings to allow images
+- Whitelist `static.josvisserict.nl` domain
 
-✅ **Verify file upload:**
-```bash
-ls -la cloudflare-pages/assets/
-# Should show logo-light.png and logo-dark.png
-```
-
-✅ **Check file names:**
-- Must be exactly: `logo-light.png` and `logo-dark.png`
-- Case sensitive!
-- No spaces or extra characters
-
-✅ **Recipient settings:**
-- Ask recipient to "Load external images"
-- Common in corporate email clients
+**Note:** This is normal behavior - most email clients block external images by default for security.
 
 ---
 
-### Logo Shows Broken Image Icon
+### Logo Alignment Issues
 
-**Problem:** ⚠️ icon instead of logo
+**Problem:** Logo or text not aligned properly
 
 **Solution:**
 
-1. **Test URL directly:**
-   ```
-   https://your-url.pages.dev/assets/logo-light.png
-   ```
-   Should load in browser
+✅ **Current signature (already fixed):**
+- Unicode icons removed ✅
+- Table-based layout ✅
+- 90×90px logo (mobile-optimized) ✅
+- Inline styles ✅
 
-2. **Check CORS headers:**
-   - Verify `_headers` file in `cloudflare-pages/`
-   - Should contain CORS settings
-
-3. **Verify file format:**
-   - Must be valid PNG
-   - Not corrupted
-   - Under 100KB
-
-4. **Re-upload logo:**
-   - Delete from `cloudflare-pages/assets/`
-   - Re-add valid PNG file
-   - Redeploy
+**If still having issues:**
+1. Re-copy signature from https://static.josvisserict.nl
+2. Delete old signature in email client
+3. Paste new version
+4. Don't manually edit in email client
 
 ---
-
-### Dark Mode Logo Not Switching
-
-**Problem:** Same logo shows in light and dark mode
-
-**Possible Causes:**
-1. Email client doesn't support dark mode
-2. Missing `logo-dark.png`
-3. CSS media query stripped
-
-**Solutions:**
-
-✅ **Check client support:**
-- ✅ Apple Mail (macOS/iOS) - Full support
-- ✅ Outlook (iOS/Android) - Supported
-- ⚠️ Gmail - Limited support
-- ❌ Outlook Desktop - Not supported
-
-✅ **Verify both logos exist:**
-```bash
-ls cloudflare-pages/assets/
-# Should show both logo-light.png and logo-dark.png
-```
-
-✅ **Test manually:**
-- Enable dark mode on your device
-- View email in supported client
-- Logo should switch
-
-✅ **Use fallback:**
-- If client doesn't support, logo-light.png shows
-- This is expected behavior
-
----
-
-## Formatting Issues
 
 ### Signature Looks Different When Sent
 
 **Problem:** Layout/colors change in sent emails
 
-**Causes:**
-- Email client strips CSS
-- Inline styles modified
-- Font availability differs
+**Common Causes:**
+- Email client modifies HTML
+- Recipient's email client renders differently
+- Dark mode auto-adjusts colors
 
 **Solutions:**
 
-✅ **Try simplified version:**
-- Use `signature-simple.html` instead
-- More compatible with strict clients
-- Less styling = less stripping
+1. **Use provided signature:**
+   - `signature-final.html` is email-optimized ✅
+   - All styles are inline ✅
+   - Table-based layout for compatibility ✅
 
-✅ **Use inline styles only:**
-- Already done in provided files
-- Avoid external CSS
-- Avoid complex selectors
+2. **Test in multiple clients:**
+   - Send to yourself in Gmail
+   - Send to yourself in Outlook
+   - Check on mobile device
 
-✅ **Test in multiple clients:**
-- Gmail (web and mobile)
-- Apple Mail
-- Outlook (desktop and web)
-- Find which works best
-
-✅ **Lock signature (Apple Mail):**
-1. Close Mail
-2. Go to: `~/Library/Mail/V10/MailData/Signatures/`
-3. Find `.mailsignature` file
-4. Right-click → Get Info → Lock
+3. **Accept minor differences:**
+   - Each email client renders slightly differently
+   - This is normal and expected
+   - Core information should always be visible
 
 ---
 
-### Text Alignment Off
+## Brand Kit Issues
 
-**Problem:** Text not aligned properly
+### Favicon Not Loading
+
+**Problem:** Browser tab doesn't show favicon
 
 **Solutions:**
 
-1. **Check HTML structure:**
-   - Verify no extra spaces
-   - Check closing tags
-   - Validate HTML syntax
+1. **Hard refresh:**
+   - Mac: Cmd+Shift+R
+   - Windows: Ctrl+Shift+R
 
-2. **Use table layout:**
-   - `signature.html` uses tables
-   - Better email client support
-   - More reliable rendering
+2. **Clear browser cache:**
+   - Chrome: Settings → Privacy → Clear browsing data
+   - Safari: Safari → Clear History
+   - Firefox: Options → Privacy → Clear Data
 
-3. **Reset and reinstall:**
-   - Delete signature from email client
-   - Re-paste from browser
-   - Don't manually edit in client
+3. **Wait for CDN:**
+   - Favicon may take 5-10 minutes to propagate
+   - Global CDN needs time to update
+
+4. **Verify file exists:**
+   - Test: https://static.josvisserict.nl/assets/josvisser-logo-favicon.png
+   - Should load immediately
 
 ---
 
-### Colors Look Wrong
+### Copy Button Not Working
 
-**Problem:** Colors appear different than intended
-
-**Solutions:**
-
-1. **Use hex colors:**
-   - Already done: `#2563eb`
-   - More reliable than RGB/HSL
-   - Consistent across clients
-
-2. **Increase contrast:**
-   - Ensure readability
-   - Test on light and dark backgrounds
-   - Avoid light gray on white
-
-3. **Check dark mode:**
-   - Colors may invert automatically
-   - Test in dark mode
-   - Adjust if needed
-
----
-
-## Installation Issues
-
-### Can't Copy Signature from Browser
-
-**Problem:** Select all doesn't work
+**Problem:** Copy button doesn't copy URL to clipboard
 
 **Solutions:**
 
-1. **Use keyboard shortcuts:**
-   - Windows: `Ctrl+A`, then `Ctrl+C`
-   - Mac: `Cmd+A`, then `Cmd+C`
+1. **Browser permissions:**
+   - Browser may block clipboard access
+   - Allow when prompted
 
-2. **Right-click method:**
-   - Right-click in browser
-   - Select "Select All"
+2. **Try again:**
+   - Click button again
+   - Should show "✅ Gekopieerd!" feedback
+
+3. **Manual copy:**
+   - Click on the URL text itself
    - Right-click → Copy
+   - Or triple-click to select, then Cmd/Ctrl+C
 
-3. **Try different browser:**
-   - Chrome/Edge - Best compatibility
-   - Safari - Works for Apple Mail
-   - Firefox - Alternative
+4. **Browser compatibility:**
+   - Works best in Chrome, Safari, Firefox, Edge
+   - May not work in very old browsers
 
 ---
 
-### Signature Doesn't Paste Correctly
+### Dark Mode Not Working
 
-**Problem:** Formatting lost when pasting
+**Problem:** Dark mode toggle doesn't switch theme
 
 **Solutions:**
 
-✅ **Gmail:**
-- Must paste in rich text editor
-- Don't use "Plain text mode"
-- Paste with `Ctrl/Cmd+V`
+1. **Check localStorage:**
+   - Open browser console (F12)
+   - Type: `localStorage.getItem('theme')`
+   - Should return 'dark' or 'light'
 
-✅ **Apple Mail:**
-- Paste with `Cmd+V` (not Shift+Cmd+V)
-- Don't use "Paste and Match Style"
-- Lock file after pasting
+2. **Clear localStorage:**
+   ```javascript
+   localStorage.removeItem('theme')
+   // Then refresh page and try again
+   ```
 
-✅ **Outlook:**
-- Paste in HTML editor
-- Not in plain text mode
-- Use signature editor, not compose
+3. **Browser compatibility:**
+   - Works in all modern browsers ✅
+   - Requires JavaScript enabled
+   - Check if JavaScript is blocked
+
+4. **Cached version:**
+   - Hard refresh: Cmd+Shift+R
+   - Clear cache and reload
 
 ---
 
-### Apple Mail Modifies Signature
+### Language Switcher Not Working
 
-**Problem:** Apple Mail changes HTML after saving
+**Problem:** Clicking NL/EN doesn't switch language
 
-**Solution - Lock the File:**
+**Solutions:**
 
-1. **Close Mail completely**
+1. **Check you're on correct page:**
+   - privacy.html → switches to → privacy-en.html
+   - terms.html → switches to → terms-en.html
 
-2. **Navigate to:**
-   ```bash
-   ~/Library/Mail/V10/MailData/Signatures/
-   ```
-   (V10 may be different version)
+2. **Clear cache:**
+   - Hard refresh browser
+   - Try incognito mode
 
-3. **Find your signature:**
-   - Look for `.mailsignature` file
-   - May need to check timestamp
-
-4. **Lock it:**
-   - Right-click → Get Info
-   - Check "Locked" checkbox
-   - Close info window
-
-5. **Reopen Mail**
-   - Signature now protected
-   - Won't be modified
+3. **Test URLs directly:**
+   - https://static.josvisserict.nl/privacy.html (NL)
+   - https://static.josvisserict.nl/privacy-en.html (EN)
+   - Both should load
 
 ---
 
 ## Deployment Issues
 
-### Cloudflare Deployment Fails
+### Changes Not Visible After Push
 
-**Problem:** Deployment doesn't complete
+**Problem:** Pushed to GitHub but changes not live
 
 **Solutions:**
 
-✅ **Check build settings:**
-- Build output: `cloudflare-pages`
-- Build command: (empty)
-- Root directory: `/`
+1. **Wait for deployment:**
+   - Cloudflare takes 1-2 minutes
+   - Check deployment status in Cloudflare dashboard
 
-✅ **Verify file structure:**
+2. **Clear browser cache:**
+   - Hard refresh: Cmd+Shift+R
+   - Try incognito/private browsing
+   - Clear all site data
+
+3. **CDN cache:**
+   - Global CDN may cache for up to 5 minutes
+   - Wait and try again
+   - Use incognito to bypass local cache
+
+4. **Verify deployment succeeded:**
+   - Check Cloudflare Dashboard → Workers & Pages
+   - View deployment logs
+   - Look for errors
+
+---
+
+### Deployment Failed
+
+**Problem:** Cloudflare deployment shows error
+
+**Common Causes:**
+- Bestandsnamen met spaties
+- Internal Cloudflare timeout
+- Invalid file formats
+
+**Solutions:**
+
+1. **Trigger redeploy:**
+   ```bash
+   git commit --allow-empty -m "Trigger redeploy"
+   git push
+   ```
+
+2. **Check filenames:**
+   - ✅ Good: `josvisser-logo-full-colour.png`
+   - ❌ Bad: `Jos Visser ICT Full Colour.png`
+   - Use URL-friendly names (no spaces)
+
+3. **Check file sizes:**
+   - Keep images under 100KB
+   - Compress if needed
+
+4. **Contact Cloudflare:**
+   - If persistent errors
+   - Check status: https://www.cloudflarestatus.com
+
+---
+
+## Apple Mail Specific
+
+### Signature Gets Modified After Pasting
+
+**Problem:** Apple Mail changes signature HTML
+
+**Solutions:**
+
+1. **Lock signature file:**
+   - Close Mail completely
+   - Navigate to: `~/Library/Mail/V10/MailData/Signatures/`
+   - Find your `.mailsignature` file
+   - Right-click → Get Info → Check "Locked"
+
+2. **Use Safari for copying:**
+   - Open signature in Safari (not Chrome)
+   - Copy from Safari
+   - Paste in Mail
+
+3. **Don't edit in Mail:**
+   - Make changes in HTML file
+   - Re-copy and re-paste
+   - Never edit directly in Mail preferences
+
+**Detailed guide:** [iOS Compatibility](iOS-Compatibility)
+
+---
+
+## Gmail Specific
+
+### Signature Formatting Lost
+
+**Problem:** Gmail removes styling
+
+**Solutions:**
+
+1. **Use rich text mode:**
+   - Ensure not in "Plain text mode"
+   - Switch to formatted text
+
+2. **Copy from Chrome:**
+   - Works best with Chrome browser
+   - Use Cmd/Ctrl+V (not Paste and Match Style)
+
+3. **Simplify if needed:**
+   - Current signature is already Gmail-optimized ✅
+   - Table-based layout works well ✅
+
+---
+
+## Mobile Issues
+
+### Signature Too Large on Mobile
+
+**Problem:** Signature takes too much space on phone
+
+**Current Status:** ✅ Already mobile-optimized!
+- Logo: 90×90px (small and compact)
+- Responsive layout
+- No unnecessary whitespace
+
+**If still an issue:**
+- This is how the signature is designed
+- Email clients may add padding
+- Consider if signature is needed on mobile replies
+
+---
+
+## Brand Kit Page Issues
+
+### Page Won't Load
+
+**Problem:** https://static.josvisserict.nl doesn't load
+
+**Solutions:**
+
+1. **Check internet connection:**
+   - Try other websites
+   - Test direct: https://static.josvisserict.nl
+
+2. **DNS propagation:**
+   - If recently deployed: wait 10-30 minutes
+   - Try different network (mobile data vs wifi)
+
+3. **Clear DNS cache:**
+   ```bash
+   # Mac
+   sudo dscacheutil -flushcache
+   sudo killall -HUP mDNSResponder
+   
+   # Windows
+   ipconfig /flushdns
+   ```
+
+4. **Try different browser:**
+   - Chrome, Safari, Firefox, Edge
+   - Incognito/private mode
+
+---
+
+### Copy Signature Button Not Working
+
+**Problem:** "📋 Kopieer Handtekening" doesn't work
+
+**Solutions:**
+
+1. **Use manual method:**
+   - Click in signature preview box
+   - Cmd+A (select all)
+   - Cmd+C (copy)
+   - Works the same way
+
+2. **Check JavaScript:**
+   - Browser must have JavaScript enabled
+   - Check browser settings
+   - Try different browser
+
+3. **Browser compatibility:**
+   - Works in Chrome, Safari, Firefox, Edge ✅
+   - May not work in very old browsers
+
+---
+
+## 404 Errors
+
+### Getting 404 on Asset URLs
+
+**Problem:** Asset URL returns "404 Not Found"
+
+**Verify URL format:**
 ```
-cloudflare-pages/
-├── index.html
-├── _headers
-├── wrangler.toml
-└── assets/
-    ├── logo-light.png
-    └── logo-dark.png
+✅ Correct: https://static.josvisserict.nl/assets/josvisser-logo.png
+❌ Wrong: https://static.josvisserict.nl/josvisser-logo.png (missing /assets/)
+❌ Wrong: https://static.josvisserict.nl/assets/Logo.png (wrong filename)
 ```
 
-✅ **Check logs:**
-- Cloudflare Pages dashboard
-- View deployment logs
-- Look for error messages
-
-✅ **Try manual deploy:**
-- Use Wrangler CLI
-- Or direct upload method
-- See [Deployment Guide](Deployment-Guide)
-
----
-
-### GitHub Actions Not Running
-
-**Problem:** Auto-deploy workflow doesn't trigger
-
-**Causes:**
-1. Secrets not configured
-2. Workflow permissions disabled
-3. Invalid workflow file
-
 **Solutions:**
 
-✅ **Check secrets:**
-- Settings → Secrets and variables → Actions
-- Verify `CLOUDFLARE_API_TOKEN` exists
-- Verify `CLOUDFLARE_ACCOUNT_ID` exists
+1. **Check exact filename:**
+   - Case sensitive!
+   - Use exact names from Brand Kit
+   - Copy URL from Brand Kit page
 
-✅ **Enable permissions:**
-- Settings → Actions → General
-- Workflow permissions: "Read and write"
-- Allow Actions to create PRs: ✅
+2. **Test in browser:**
+   - Paste URL directly in browser
+   - Should load immediately
+   - If not, filename is wrong
 
-✅ **Check workflow file:**
-```bash
-cat .github/workflows/deploy.yml
-# Should be valid YAML
-# Check indentation
-```
-
-✅ **Manual trigger:**
-- Actions tab → Deploy workflow
-- Run workflow manually
-- Check logs for errors
-
----
-
-### Can't Access Cloudflare URL
-
-**Problem:** 404 or connection error
-
-**Solutions:**
-
-1. **Wait for propagation:**
-   - Can take 5-10 minutes
-   - Check deployment status
-   - Refresh browser
-
-2. **Verify URL:**
-   - Should be: `https://project-name.pages.dev`
-   - Check spelling
-   - Use HTTPS, not HTTP
-
-3. **Check deployment status:**
-   - Cloudflare dashboard
-   - Should show "Active"
-   - Not "Building" or "Failed"
-
----
-
-## Email Client Specific
-
-### Gmail Issues
-
-**Problem:** Signature not showing or formatting lost
-
-**Solutions:**
-
-1. **Use Chrome browser** for best compatibility
-2. **Disable plain text mode** in Gmail settings
-3. **Check signature settings:**
-   - Settings → See all settings
-   - Signature section
-   - Verify signature selected for account
-4. **Mobile Gmail:**
-   - Signature may look different
-   - Some styling limitations expected
-
----
-
-### Outlook Desktop Issues
-
-**Problem:** Signature doesn't look right
-
-**Solutions:**
-
-1. **Outlook uses Word rendering engine:**
-   - Limited CSS support
-   - Try `signature-simple.html`
-   - Some features won't work
-
-2. **Dark mode not supported:**
-   - Outlook Desktop doesn't respect media queries
-   - Logo-light.png will always show
-   - This is normal
-
-3. **File → Options → Mail → Signatures:**
-   - Must paste in HTML editor
-   - Not rich text editor
-   - Clear formatting before pasting
-
----
-
-### Apple Mail Issues
-
-**Problem:** Signature keeps changing
-
-**Solutions:**
-
-1. **Lock the signature file** (see above)
-2. **Don't edit in Mail:**
-   - Edit `signature.html` instead
-   - Re-install completely
-3. **Check macOS version:**
-   - Newer versions better support
-   - Update if possible
-
----
-
-## Testing Issues
-
-### Can't Test Dark Mode
-
-**Problem:** Don't see dark mode version
-
-**Solutions:**
-
-1. **Enable dark mode on device:**
-   - macOS: System Preferences → General → Appearance
-   - iOS: Settings → Display & Brightness → Dark
-   - Windows: Settings → Personalization → Colors
-
-2. **Use supported client:**
-   - Apple Mail ✅
-   - Outlook mobile ✅
-   - Gmail ⚠️ (limited)
-
-3. **Send test email:**
-   - Send to yourself
-   - View on device with dark mode
-   - Check both logos
+3. **View all assets:**
+   - Go to https://static.josvisserict.nl
+   - All available assets are listed
+   - Use copy buttons for correct URLs
 
 ---
 
 ## Performance Issues
 
-### Slow Loading
+### Brand Kit Page Loads Slowly
 
-**Problem:** Signature takes time to load
+**Problem:** Page takes long to load
+
+**Expected behavior:**
+- Should load in under 2 seconds globally
+- Cloudflare CDN optimized for speed
 
 **Solutions:**
 
-1. **Optimize logos:**
-   - Compress with [TinyPNG](https://tinypng.com)
-   - Target 20-50KB per file
-   - Max 100KB
+1. **Check your internet:**
+   - Test speed: https://fast.com
+   - Slow connection affects loading
 
-2. **Use CDN:**
-   - Cloudflare Pages is a CDN ✅
-   - Already optimized
-   - Fast worldwide
+2. **Clear browser cache:**
+   - Old cached version may be corrupted
+   - Hard refresh: Cmd+Shift+R
 
-3. **Check file sizes:**
-   ```bash
-   ls -lh cloudflare-pages/assets/
-   # Should show file sizes
-   ```
+3. **Check Cloudflare status:**
+   - Visit: https://www.cloudflarestatus.com
+   - Verify no outages
 
 ---
 
-## Privacy & Security
+## Need More Help?
 
-### Apple Mail Security Warning
+### Quick Resources
 
-**Problem:** "This message contains blocked images"
+- 🎨 [Brand Kit](https://static.josvisserict.nl) - View all assets
+- 📚 [Installation Guide](Installation-Guide) - Step-by-step setup
+- 🚀 [Quick Start](Quick-Start-Guide) - Fast setup
+- 📱 [iOS Compatibility](iOS-Compatibility) - Apple device help
 
-**Explanation:**
-- Apple Mail protects privacy
-- Blocks some external content
-- Normal behavior
-- Not an error
+### Contact
 
-**What happens:**
-- Recipient sees warning
-- Can click to load images
-- Signature then displays
-- Cloudflare Pages minimizes this
+If you can't resolve the issue:
 
-**Solution:**
-- Use Cloudflare Pages ✅ (already done)
-- Proper CORS headers ✅ (already configured)
-- No tracking pixels ✅ (privacy-first design)
-- Some clients will always prompt
+**Jos Visser ICT**  
+📧 info@josvisserict.nl  
+📱 +31 (0)6 124 159 90
 
 ---
 
-## Still Having Issues?
+## Common Misconceptions
 
-### Getting Help
+### "Logo must be on my server"
+❌ **False** - Logos are on Cloudflare CDN (faster, more reliable)
 
-1. **Check documentation:**
-   - [Installation Guide](Installation-Guide)
-   - [Deployment Guide](Deployment-Guide)
-   - [Logo Requirements](Logo-Requirements)
+### "I need analytics/tracking"
+❌ **Not needed** - System is privacy-focused, no tracking required
 
-2. **Review files:**
-   - Double-check all steps
-   - Verify file names and locations
-   - Test URLs directly
+### "External images are unsafe"
+✅ **Safe** - HTTPS + Cloudflare security + CORS configured properly
 
-3. **Test systematically:**
-   - One email client at a time
-   - Eliminate variables
-   - Document what works
-
-4. **Common mistakes:**
-   - Wrong URL in signature HTML
-   - Files in wrong folder
-   - Incorrect file names
-   - Deployment not complete
+### "Email signature needs JavaScript"
+✅ **Correct for Brand Kit** - But email signature itself is pure HTML (no JS)
 
 ---
 
-## Quick Diagnostic
-
-Run through this checklist:
-
-```
-☐ Logos exist in cloudflare-pages/assets/
-☐ File names exactly: logo-light.png, logo-dark.png
-☐ Cloudflare deployment succeeded
-☐ Cloudflare URL accessible in browser
-☐ URL updated in signature.html (both occurrences)
-☐ Signature copied from browser correctly
-☐ Pasted in email client's signature editor
-☐ Signature selected for email account
-☐ Test email sent and received
-```
-
-If all checked and still issues, review specific sections above.
-
----
-
-**Need more help?** Check other wiki pages:
-- [Quick Start Guide](Quick-Start-Guide)
-- [Installation Guide](Installation-Guide)
-- [Deployment Guide](Deployment-Guide)
-
+**Still having issues?** Check [GitHub Issues](https://github.com/Qballjos/Email_Signature_JosVisserICT/issues) or create a new one.

@@ -1,258 +1,203 @@
 # 🎨 Logo Requirements
 
-Complete guide to creating logos for your email signature.
+Complete guide to the Jos Visser ICT logo variants and specifications.
 
-## ✅ Current Setup
+## ✅ Current Logo Variants (6 Total)
 
-Your logo is already configured!
+All logos are deployed and ready to use at https://static.josvisserict.nl
 
-### josvisser-logo.png
-- **Resolution:** 1360×1360px (high-resolution)
-- **Displayed at:** 240×240px in email
-- **Works for:** Both light AND dark mode
-- **Design:** Orange branding (#f6a000)
+### 1. josvisser-logo-full-colour.png ⭐
+- **Primary brand logo** - Full colour version
+- **Use for:** Marketing materials, website, presentations
+
+### 2. josvisser-logo-black.png
+- **Black version** - For light backgrounds
+- **Use for:** Print materials, light-colored backgrounds
+
+### 3. josvisser-logo-app-icon.png
+- **Application icon** - Optimized for apps
+- **Use for:** Mobile apps, desktop applications
+
+### 4. josvisser-logo-favicon.png
+- **Favicon** - Website icon
+- **Use for:** Browser tabs, bookmarks
+
+### 5. josvisser-logo-artboard.png
+- **Design artboard** - Complete design version
+- **Use for:** Design work, presentations
+
+### 6. josvisser-logo.png
+- **Email signature logo** - 1360×1360px high-resolution
+- **Displayed at:** 90×90px in email
+- **Design:** Orange branding (#ea8b39)
 - **File size:** 56KB
+- **Works for:** Email signatures (current)
 
 ---
 
-## Specifications
+## Technical Specifications
 
-### Dimensions
-- **Recommended:** 300px × 100px (3:1 ratio)
-- **Minimum:** 200px × 67px
-- **Maximum:** 600px × 200px
-- Maintain aspect ratio
+### Email Signature Logo (`josvisser-logo.png`)
+- **Source Resolution:** 1360×1360px (square, high-res)
+- **Display Size:** 90×90px (mobile-optimized)
+- **Format:** PNG with transparency
+- **File Size:** 56KB
+- **Color:** Orange branding (#ea8b39)
+- **Style:** Rounded corners (12px radius in HTML)
 
-### File Format
-- **Format:** PNG (recommended)
-- **Background:** Transparent
+### General Logo Guidelines
+- **Format:** PNG with transparent background
 - **Color Space:** sRGB
-
-### File Size
-- **Target:** 20-50 KB per file
-- **Maximum:** 100 KB per file
-- Smaller = faster loading
-
-### Quality
-- **Resolution:** 72-150 DPI
-- **Color depth:** 24-bit (PNG) or 32-bit with alpha
-- Sharp, professional appearance
+- **Optimization:** Compress for web delivery
+- **Quality:** Sharp at display size
+- **Naming:** Use URL-friendly names (lowercase, hyphens, no spaces)
 
 ---
 
-## Design Guidelines
+## Design Principles
 
-### For universal logos (like yours):
+### Color Guidelines
 ```
-✅ Use medium/bright colors (orange #f6a000 works!)
-✅ High contrast on both light and dark
-✅ Readable at small sizes
+✅ Orange primary: #ea8b39
+✅ Orange accent: #ffa500
+✅ High contrast on both light and dark backgrounds
+✅ Readable at small sizes (90×90px minimum)
 ✅ Transparent background
-❌ Avoid pure black or pure white
-❌ Avoid very light or very dark grays
+✅ Consistent brand colors across all variants
+```
+
+### File Naming Best Practices
+```
+✅ Good: josvisser-logo-full-colour.png
+✅ Good: josvisser-logo-black.png
+❌ Bad: Jos Visser ICT_Full Colour.png (spaces)
+❌ Bad: Logo_Final_v2.png (unclear, version in name)
+❌ Bad: LOGO.PNG (all caps)
 ```
 
 ---
 
-## Example Color Schemes
+## Access Your Logo Variants
 
-### Professional
-- **Light:** `#1a1a1a` (dark gray)
-- **Dark:** `#ffffff` (white)
+### Via Brand Kit
 
-### Brand Colors
-- **Light:** `#2563eb` (blue)
-- **Dark:** `#60a5fa` (light blue)
+Visit https://static.josvisserict.nl to:
+- 👀 Preview all 6 logo variants
+- 📋 Copy asset URLs with one click
+- 🔗 Direct download links
 
----
-
-## Tools for Creating Logos
-
-### Free Online
-1. **[Canva](https://canva.com)**
-   - Easy templates
-   - Export PNG with transparency
-
-2. **[Photopea](https://photopea.com)**
-   - Free Photoshop alternative
-   - Advanced editing
-
-3. **[GIMP](https://gimp.org)**
-   - Free desktop software
-   - Professional features
-
-### Professional
-1. **Adobe Illustrator** - Vector graphics
-2. **Adobe Photoshop** - Raster graphics
-3. **Figma** - Web-based design
+Each variant has:
+- Preview thumbnail
+- Full URL for sharing
+- Copy button for easy access
 
 ---
 
-## Quick Creation Guide
+## Creating New Logo Variants
 
-### Option 1: Simple Inversion
+If you need additional logo variants:
 
-If you have one logo:
+### Design Tools
 
-1. Open in image editor
-2. **For light version:** Use original
-3. **For dark version:** Invert colors (Ctrl/Cmd+I)
-4. Export both as PNG
+**Free:**
+- [Canva](https://canva.com) - Easy templates
+- [Photopea](https://photopea.com) - Free Photoshop alternative
+- [GIMP](https://gimp.org) - Professional desktop software
 
-### Option 2: Color Replacement
+**Professional:**
+- Adobe Illustrator - Vector graphics
+- Adobe Photoshop - Raster editing
+- Figma - Web-based design
 
-1. Open logo in editor
-2. **Light version:**
-   - Change to dark color `#333333`
-   - Save transparent PNG
-3. **Dark version:**
-   - Change to light color `#ffffff`
-   - Save transparent PNG
+### Export Guidelines
 
-### Option 3: Text-Based Logo
-
-Simple text as logo:
-
-1. Create 300x100px canvas
-2. Add text: "Jos Visser ICT"
-3. **Light:** Black text `#000000`
-4. **Dark:** White text `#ffffff`
-5. Use professional font (Helvetica, Arial)
-6. Export both as PNG with transparency
+1. **Format:** PNG with transparency
+2. **Resolution:** High-res (min 1000px for largest dimension)
+3. **Optimization:** Compress with [TinyPNG](https://tinypng.com)
+4. **Naming:** Use kebab-case (josvisser-logo-variant-name.png)
 
 ---
 
-## Testing Your Logos
+## Adding New Logos to Brand Kit
 
-### Test on White Background
-1. Open `logo-light.png`
-2. Place on white canvas
-3. Ensure clearly visible
-
-### Test on Dark Background
-1. Open `logo-dark.png`
-2. Place on black canvas
-3. Ensure clearly visible
-
-### Test Small Size
-1. Resize to 150x50px
-2. Verify text readable
-3. Check clarity
+1. **Create your logo** (PNG format)
+2. **Name it properly:** `josvisser-logo-[variant].png`
+3. **Compress:** Keep under 100KB
+4. **Add to:** `cloudflare-pages/assets/`
+5. **Update:** `cloudflare-pages/index.html` to display it
+6. **Commit and push:** Auto-deploys to Cloudflare
+7. **Verify:** Check https://static.josvisserict.nl
 
 ---
 
-## Where to Place Files
+## Logo Usage Guidelines
 
-After creating:
+### Email Signature
+- Use `josvisser-logo.png` (current 90×90px display)
+- High-res 1360×1360px ensures crisp display
+- Orange branding (#ea8b39) works on light/dark
 
-**1. Backup originals:**
-```
-assets/
-├── logo-light.png
-└── logo-dark.png
-```
+### Website/Marketing
+- Use `josvisser-logo-full-colour.png` for primary branding
+- Use `josvisser-logo-black.png` on light backgrounds
+- Maintain aspect ratio when resizing
 
-**2. Deploy versions:**
-```
-cloudflare-pages/assets/
-├── logo-light.png
-└── logo-dark.png
-```
+### Applications
+- Use `josvisser-logo-app-icon.png` for app icons
+- Use `josvisser-logo-favicon.png` for browser favicons
 
----
-
-## File Naming
-
-**IMPORTANT:** Use exact names:
-
-✅ Correct:
-- `logo-light.png` (lowercase, hyphen)
-- `logo-dark.png` (lowercase, hyphen)
-
-❌ Wrong:
-- `Logo-Light.PNG`
-- `logo_light.png`
-- `logolight.png`
-
----
-
-## Professional Help
-
-### Can't Create Yourself?
-
-**Quick Options:**
-1. **Fiverr** - $5-$25
-2. **99designs** - Contests
-3. **Upwork** - Hire designer
-
-### Free Placeholder
-
-Use text temporarily:
-- Your name in nice font
-- Simple and professional
-- Replace later
-
----
-
-## Example Workflow
-
-### Using Canva (Free)
-
-1. **Sign up:** [canva.com](https://canva.com)
-2. **Create:** 300x100px design
-3. **Add text:** "Jos Visser ICT"
-4. **Style:** Professional font, your colors
-5. **Create two versions:**
-   - Dark text on transparent (light version)
-   - White text on transparent (dark version)
-6. **Export:** PNG with transparency
-7. **Name:** `logo-light.png` and `logo-dark.png`
+### Print Materials
+- Use highest resolution variant available
+- Consider `josvisser-logo-black.png` for black & white printing
+- Ensure 300 DPI for print quality
 
 ---
 
 ## Optimization Tips
 
-### Reduce File Size
+### Current Logo Optimization
 
-1. **Use PNG-8** instead of PNG-24 if possible
-2. **Compress** with [TinyPNG](https://tinypng.com)
-3. **Remove metadata**
-4. **Minimize colors** while maintaining quality
+All current logos are already optimized:
+- ✅ PNG format with transparency
+- ✅ Compressed for web delivery
+- ✅ URL-friendly filenames
+- ✅ Appropriate file sizes
+- ✅ High resolution for quality display
 
-### Ensure Quality
+### For New Logos
 
-1. **Use vector source** if possible
-2. **Export at 2x size** then scale down
-3. **Check sharpness** at actual size
-4. **Test in email** before finalizing
+1. **Compress** with [TinyPNG](https://tinypng.com)
+2. **Remove metadata** (EXIF data)
+3. **Use PNG-8** if fewer colors needed
+4. **Test at display size** before deploying
 
 ---
 
-## Checklist
+## Logo URLs Reference
 
-Before using your logos:
+All logos accessible via CDN:
 
-- [ ] Created both `logo-light.png` and `logo-dark.png`
-- [ ] Correct dimensions (~300x100px)
-- [ ] PNG format with transparency
-- [ ] Under 100KB each
-- [ ] Tested on white background (light version)
-- [ ] Tested on dark background (dark version)
-- [ ] Readable at small size
-- [ ] Correct file names (lowercase, hyphen)
-- [ ] Placed in `cloudflare-pages/assets/`
-- [ ] Backups in `assets/` folder
+```
+https://static.josvisserict.nl/assets/josvisser-logo-full-colour.png
+https://static.josvisserict.nl/assets/josvisser-logo-black.png
+https://static.josvisserict.nl/assets/josvisser-logo-app-icon.png
+https://static.josvisserict.nl/assets/josvisser-logo-favicon.png
+https://static.josvisserict.nl/assets/josvisser-logo-artboard.png
+https://static.josvisserict.nl/assets/josvisser-logo.png
+```
+
+**Quick access:** Visit [Brand Kit](https://static.josvisserict.nl) for copy buttons
 
 ---
 
 ## Next Steps
 
-Once logos are ready:
+- **View all logos:** [Brand Kit](https://static.josvisserict.nl)
+- **Install signature:** [Installation Guide](Installation-Guide)
+- **Deploy changes:** [Deployment Guide](Deployment-Guide)
+- **Get help:** [Troubleshooting](Troubleshooting)
 
-1. Place in `cloudflare-pages/assets/`
-2. Follow [Deployment Guide](Deployment-Guide)
-3. Update signature HTML
-4. Install in email client
+---
 
-**Continue:** [Quick Start Guide](Quick-Start-Guide)
+**All logos ready!** ✅ Visit https://static.josvisserict.nl to explore.
 
