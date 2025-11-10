@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Pagina Niet Gevonden | Jos Visser ICT</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/josvisser-logo-favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/josvisser-logo-favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/josvisser-logo-app-icon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 600px;
+        }
+        
+        .logo {
+            margin-bottom: 40px;
+            animation: fadeInDown 0.6s ease;
+        }
+        
+        .logo img {
+            width: 120px;
+            height: 120px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(234, 139, 57, 0.3);
+        }
+        
+        .error-code {
+            font-size: 120px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ea8b39 0%, #ffa500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.6s ease 0.2s both;
+        }
+        
+        h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #fff;
+            animation: fadeInUp 0.6s ease 0.3s both;
+        }
+        
+        p {
+            font-size: 18px;
+            color: #999;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            animation: fadeInUp 0.6s ease 0.4s both;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.6s ease 0.5s both;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #ea8b39 0%, #ffa500 100%);
+            color: #000;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(234, 139, 57, 0.4);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #ea8b39;
+        }
+        
+        .suggestions {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeIn 0.6s ease 0.6s both;
+        }
+        
+        .suggestions h2 {
+            font-size: 18px;
+            color: #ea8b39;
+            margin-bottom: 20px;
+        }
+        
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .links a {
+            color: #999;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-size: 14px;
+        }
+        
+        .links a:hover {
+            color: #ea8b39;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 80px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            p {
+                font-size: 16px;
+            }
+            
+            .buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="/assets/josvisser-logo-app-icon.png" alt="Jos Visser ICT">
+        </div>
+        
+        <div class="error-code">404</div>
+        
+        <h1>Pagina Niet Gevonden</h1>
+        
+        <p>
+            Sorry, de pagina die je zoekt bestaat niet of is verplaatst.<br>
+            Controleer de URL of ga terug naar de homepage.
+        </p>
+        
+        <div class="buttons">
+            <a href="/" class="btn btn-primary">🏠 Terug naar Brand Kit</a>
+            <a href="https://josvisserict.nl" class="btn btn-secondary">🌐 Naar Website</a>
+        </div>
+        
+        <div class="suggestions">
+            <h2>Populaire Pagina's</h2>
+            <div class="links">
+                <a href="/">Brand Kit</a>
+                <a href="/privacy.html">Privacyverklaring</a>
+                <a href="/terms.html">Algemene Voorwaarden</a>
+                <a href="/privacy-en.html">Privacy Policy (EN)</a>
+                <a href="/terms-en.html">Terms and Conditions (EN)</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
