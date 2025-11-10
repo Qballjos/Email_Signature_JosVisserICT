@@ -715,27 +715,73 @@
         updateTime();
         setInterval(updateTime, 1000);
         
-        // Theme toggle functionaliteit
+        // Theme toggle functionaliteit met auto-detect
         function toggleTheme() {
-            document.body.classList.toggle('light-mode');
-            const isLight = document.body.classList.contains('light-mode');
-            localStorage.setItem('brandkit-theme', isLight ? 'light' : 'dark');
+            const currentTheme = localStorage.getItem('brandkit-theme');
+            let newTheme;
+            
+            if (!currentTheme || currentTheme === 'auto') {
+                // Van auto naar dark
+                newTheme = 'dark';
+                document.body.classList.remove('light-mode');
+            } else if (currentTheme === 'dark') {
+                // Van dark naar light
+                newTheme = 'light';
+                document.body.classList.add('light-mode');
+            } else {
+                // Van light naar auto
+                newTheme = 'auto';
+                applySystemTheme();
+            }
+            
+            localStorage.setItem('brandkit-theme', newTheme);
             updateThemeIcon();
+        }
+        
+        function applySystemTheme() {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (prefersDark) {
+                document.body.classList.remove('light-mode');
+            } else {
+                document.body.classList.add('light-mode');
+            }
         }
         
         function updateThemeIcon() {
             const icon = document.querySelector('.theme-icon');
-            const isLight = document.body.classList.contains('light-mode');
-            icon.textContent = isLight ? '🌙' : '☀️';
+            const savedTheme = localStorage.getItem('brandkit-theme');
+            
+            if (savedTheme === 'light') {
+                icon.textContent = '🌙';
+            } else if (savedTheme === 'dark') {
+                icon.textContent = '☀️';
+            } else {
+                icon.textContent = '🔄'; // Auto mode
+            }
         }
         
-        // Check saved theme preference
+        // Initialize theme op basis van voorkeur of systeem
         (function() {
             const savedTheme = localStorage.getItem('brandkit-theme');
+            
             if (savedTheme === 'light') {
                 document.body.classList.add('light-mode');
-                updateThemeIcon();
+            } else if (savedTheme === 'dark') {
+                document.body.classList.remove('light-mode');
+            } else {
+                // Auto mode: volg systeem
+                applySystemTheme();
             }
+            
+            updateThemeIcon();
+            
+            // Listen voor systeem thema changes (alleen in auto mode)
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                const savedTheme = localStorage.getItem('brandkit-theme');
+                if (!savedTheme || savedTheme === 'auto') {
+                    applySystemTheme();
+                }
+            });
         })();
         
         // Copy to clipboard functie
