@@ -37,11 +37,16 @@
             background: #f5f5f5;
         }
         
-        .language-switcher {
+        .controls {
             position: fixed;
             top: 20px;
             right: 20px;
             z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .language-switcher {
             display: flex;
             gap: 5px;
             background: white;
@@ -67,6 +72,93 @@
         .language-switcher a.active {
             background: #ea8b39;
             color: white;
+        }
+        
+        .theme-toggle {
+            background: white;
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            border: none;
+            font-size: 20px;
+            transition: all 0.2s;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .theme-toggle:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background: #0f0f0f;
+            color: #e5e7eb;
+        }
+        
+        body.dark-mode .container {
+            background: #1a1a1a;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        
+        body.dark-mode .language-switcher,
+        body.dark-mode .theme-toggle {
+            background: #2a2a2a;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        
+        body.dark-mode .language-switcher a {
+            color: #999;
+        }
+        
+        body.dark-mode .language-switcher a:hover {
+            background: #3a3a3a;
+        }
+        
+        body.dark-mode .language-switcher a.active {
+            background: #ea8b39;
+            color: white;
+        }
+        
+        body.dark-mode h1,
+        body.dark-mode h2,
+        body.dark-mode h3 {
+            color: #ea8b39;
+        }
+        
+        body.dark-mode p,
+        body.dark-mode li {
+            color: #d1d5db;
+        }
+        
+        body.dark-mode .company-info {
+            color: #9ca3af;
+        }
+        
+        body.dark-mode .highlight {
+            background: rgba(234, 139, 57, 0.1);
+            border-left-color: #ea8b39;
+        }
+        
+        body.dark-mode .contact-box {
+            background: #2a2a2a;
+        }
+        
+        body.dark-mode footer {
+            border-top-color: #3a3a3a;
+            color: #9ca3af;
+        }
+        
+        body.dark-mode header {
+            border-bottom-color: #ea8b39;
+        }
+        
+        body.dark-mode a {
+            color: #ffa500;
         }
         
         .container {
@@ -165,17 +257,23 @@
                 font-size: 20px;
             }
             
-            .language-switcher {
+            .controls {
                 top: 10px;
                 right: 10px;
+                flex-direction: column;
             }
         }
     </style>
 </head>
 <body>
-    <div class="language-switcher">
-        <a href="/terms.html">NL</a>
-        <a href="/terms-en.html" class="active">EN</a>
+    <div class="controls">
+        <div class="language-switcher">
+            <a href="/terms.html">NL</a>
+            <a href="/terms-en.html" class="active">EN</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+            <span class="theme-icon">🌙</span>
+        </button>
     </div>
 
     <div class="container">
@@ -310,6 +408,31 @@
             </p>
         </footer>
     </div>
+    
+    <script>
+        // Dark mode functionaliteit
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateThemeIcon();
+        }
+        
+        function updateThemeIcon() {
+            const icon = document.querySelector('.theme-icon');
+            const isDark = document.body.classList.contains('dark-mode');
+            icon.textContent = isDark ? '☀️' : '🌙';
+        }
+        
+        // Check saved theme preference
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                updateThemeIcon();
+            }
+        })();
+    </script>
 </body>
 </html>
 
