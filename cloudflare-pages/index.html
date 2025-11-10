@@ -331,6 +331,74 @@
             color: #666;
         }
         
+        .logo-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .logo-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #ea8b39;
+            transform: translateY(-2px);
+        }
+        
+        .logo-card .asset-preview {
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        
+        .logo-card .asset-preview img {
+            max-height: 80px;
+        }
+        
+        .logo-card h4 {
+            font-size: 14px;
+            margin: 0 0 5px 0;
+            color: #fff;
+        }
+        
+        .logo-card p {
+            font-size: 11px;
+            color: #999;
+            margin: 0 0 10px 0;
+        }
+        
+        .logo-card .url-container {
+            margin-top: 10px;
+        }
+        
+        .logo-card .url-container code {
+            font-size: 10px;
+            padding: 6px 8px;
+        }
+        
+        .logo-card .copy-btn {
+            padding: 6px 10px;
+            font-size: 11px;
+        }
+        
+        body.light-mode .logo-card {
+            background: #fafafa;
+            border-color: #e5e7eb;
+        }
+        
+        body.light-mode .logo-card:hover {
+            background: white;
+            border-color: #ea8b39;
+        }
+        
+        body.light-mode .logo-card h4 {
+            color: #333;
+        }
+        
+        body.light-mode .logo-card p {
+            color: #666;
+        }
+        
         .asset-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -532,76 +600,76 @@
         <!-- Logo's & Documenten -->
         <div class="section">
             <h2>Logo's & Documenten</h2>
-            <div class="grid">
-                <div class="asset-card">
+            <div class="grid-compact">
+                <div class="logo-card" onclick="window.open('https://static.josvisserict.nl/assets/josvisser-logo-full-colour.png', '_blank')">
                     <div class="asset-preview">
                         <img src="/assets/josvisser-logo-full-colour.png" alt="Jos Visser ICT Full Colour">
                     </div>
-                    <h3>Full Colour Logo</h3>
+                    <h4>Full Colour</h4>
                     <p>Volledige kleurversie</p>
                     <div class="url-container">
-                        <code onclick="window.open('https://static.josvisserict.nl/assets/josvisser-logo-full-colour.png', '_blank')">https://static.josvisserict.nl/assets/josvisser-logo-full-colour.png</code>
-                        <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/assets/josvisser-logo-full-colour.png', this)">📋 Copy</button>
+                        <code onclick="event.stopPropagation(); window.open('https://static.josvisserict.nl/assets/josvisser-logo-full-colour.png', '_blank')">...full-colour.png</code>
+                        <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/assets/josvisser-logo-full-colour.png', this)">📋</button>
                     </div>
                 </div>
                 
-                <div class="asset-card">
+                <div class="logo-card" onclick="window.open('https://static.josvisserict.nl/assets/josvisser-logo-black.png', '_blank')">
                     <div class="asset-preview" style="background: white;">
                         <img src="/assets/josvisser-logo-black.png" alt="Jos Visser ICT Black">
                     </div>
-                    <h3>Black Logo</h3>
-                    <p>Zwarte versie voor lichte achtergronden</p>
+                    <h4>Black</h4>
+                    <p>Voor lichte achtergronden</p>
                     <div class="url-container">
-                        <code onclick="window.open('https://static.josvisserict.nl/assets/josvisser-logo-black.png', '_blank')">https://static.josvisserict.nl/assets/josvisser-logo-black.png</code>
-                        <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/assets/josvisser-logo-black.png', this)">📋 Copy</button>
+                        <code onclick="event.stopPropagation(); window.open('https://static.josvisserict.nl/assets/josvisser-logo-black.png', '_blank')">...black.png</code>
+                        <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/assets/josvisser-logo-black.png', this)">📋</button>
                     </div>
                 </div>
                 
-                <div class="asset-card">
+                <div class="logo-card" onclick="window.open('https://static.josvisserict.nl/assets/josvisser-logo-app-icon.png', '_blank')">
                     <div class="asset-preview">
                         <img src="/assets/josvisser-logo-app-icon.png" alt="Jos Visser ICT App Icon">
                     </div>
-                    <h3>App Icon</h3>
-                    <p>Application icon formaat</p>
+                    <h4>App Icon</h4>
+                    <p>Application icon</p>
                     <div class="url-container">
-                        <code onclick="window.open('https://static.josvisserict.nl/assets/josvisser-logo-app-icon.png', '_blank')">https://static.josvisserict.nl/assets/josvisser-logo-app-icon.png</code>
-                        <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/assets/josvisser-logo-app-icon.png', this)">📋 Copy</button>
+                        <code onclick="event.stopPropagation(); window.open('https://static.josvisserict.nl/assets/josvisser-logo-app-icon.png', '_blank')">...app-icon.png</code>
+                        <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/assets/josvisser-logo-app-icon.png', this)">📋</button>
                     </div>
                 </div>
                 
-                <div class="asset-card">
+                <div class="logo-card" onclick="window.open('https://static.josvisserict.nl/assets/josvisser-logo-favicon.png', '_blank')">
                     <div class="asset-preview">
                         <img src="/assets/josvisser-logo-favicon.png" alt="Jos Visser ICT Favicon">
                     </div>
-                    <h3>Favicon</h3>
-                    <p>Website favicon formaat</p>
+                    <h4>Favicon</h4>
+                    <p>Website favicon</p>
                     <div class="url-container">
-                        <code onclick="window.open('https://static.josvisserict.nl/assets/josvisser-logo-favicon.png', '_blank')">https://static.josvisserict.nl/assets/josvisser-logo-favicon.png</code>
-                        <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/assets/josvisser-logo-favicon.png', this)">📋 Copy</button>
+                        <code onclick="event.stopPropagation(); window.open('https://static.josvisserict.nl/assets/josvisser-logo-favicon.png', '_blank')">...favicon.png</code>
+                        <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/assets/josvisser-logo-favicon.png', this)">📋</button>
                     </div>
                 </div>
                 
-                <div class="asset-card">
+                <div class="logo-card" onclick="window.open('https://static.josvisserict.nl/assets/josvisser-logo.png', '_blank')">
                     <div class="asset-preview">
                         <img src="/assets/josvisser-logo.png" alt="Jos Visser ICT Logo">
                     </div>
-                    <h3>Hoofdlogo (Oud)</h3>
-                    <p>High-resolution PNG • 1360×1360px</p>
+                    <h4>Hoofdlogo</h4>
+                    <p>1360×1360px (oud)</p>
                     <div class="url-container">
-                        <code onclick="window.open('https://static.josvisserict.nl/assets/josvisser-logo.png', '_blank')">https://static.josvisserict.nl/assets/josvisser-logo.png</code>
-                        <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/assets/josvisser-logo.png', this)">📋 Copy</button>
+                        <code onclick="event.stopPropagation(); window.open('https://static.josvisserict.nl/assets/josvisser-logo.png', '_blank')">...logo.png</code>
+                        <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/assets/josvisser-logo.png', this)">📋</button>
                     </div>
                 </div>
                 
-                <div class="asset-card">
+                <div class="logo-card" onclick="window.open('https://static.josvisserict.nl/assets/josvisser-logo-artboard.png', '_blank')">
                     <div class="asset-preview">
                         <img src="/assets/josvisser-logo-artboard.png" alt="Jos Visser ICT Artboard">
                     </div>
-                    <h3>Tekengebied</h3>
-                    <p>Design artboard versie</p>
+                    <h4>Tekengebied</h4>
+                    <p>Design artboard</p>
                     <div class="url-container">
-                        <code onclick="window.open('https://static.josvisserict.nl/assets/josvisser-logo-artboard.png', '_blank')">https://static.josvisserict.nl/assets/josvisser-logo-artboard.png</code>
-                        <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/assets/josvisser-logo-artboard.png', this)">📋 Copy</button>
+                        <code onclick="event.stopPropagation(); window.open('https://static.josvisserict.nl/assets/josvisser-logo-artboard.png', '_blank')">...artboard.png</code>
+                        <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard('https://static.josvisserict.nl/assets/josvisser-logo-artboard.png', this)">📋</button>
                     </div>
                 </div>
             </div>
