@@ -1,37 +1,58 @@
-# Email Signature - Jos Visser ICT
+# Email Signature & Brand Kit - Jos Visser ICT
 
-Welcome to the Email Signature wiki! This guide will help you set up a professional email signature with dark/light mode support.
+Welcome to the complete Brand Kit wiki! This system includes email signature, brand assets, and legal pages.
 
 ## 🚀 Quick Links
 
 - **[Quick Start Guide](Quick-Start-Guide)** - Get started in 10 minutes
 - **[Installation Guide](Installation-Guide)** - Step-by-step installation
 - **[Deployment Guide](Deployment-Guide)** - Deploy to Cloudflare Pages
-- **[Logo Requirements](Logo-Requirements)** - How to create your logos
+- **[Logo Requirements](Logo-Requirements)** - Logo specifications
 - **[GitHub Setup](GitHub-Setup)** - Configure your repository
 - **[iOS Compatibility](iOS-Compatibility)** - iPhone & iPad setup guide
 - **[Troubleshooting](Troubleshooting)** - Common issues and solutions
 
 ## 📧 What Is This?
 
-A professional, responsive email signature for **Jos Visser ICT** featuring:
+A complete **Brand Asset System** for **Jos Visser ICT** featuring:
 
-- ✨ Clean, modern design
-- 🌓 Automatic dark/light mode switching
-- 📱 Mobile-responsive layout
-- 🔒 Privacy-focused (Apple Mail compatible)
-- 🌐 Hosted assets via Cloudflare Pages
-- 📧 Compatible with all major email clients
+### Email Signature
+- ✨ Clean, modern design (no icon clutter)
+- 🌓 Dark mode support for email clients
+- 📱 Mobile-optimized (90×90px logo)
+- 🔒 Privacy-focused (no tracking)
+- 📧 Universal email client compatibility
+
+### Brand Kit (static.josvisserict.nl)
+- 🎨 Modern dark theme asset hosting
+- 🖼️ 6 logo variants (Full Colour, Black, App Icon, Favicon, Artboard)
+- 📋 One-click copy for all URLs
+- ⚡ Real-time status monitoring
+- 🔗 Direct preview links
+
+### Legal Pages
+- 🔒 Privacy Policy (NL + EN) - GDPR compliant
+- 📜 Terms and Conditions (NL + EN)
+- 🔄 Language switcher (NL ↔ EN)
+- 🌙 Dark mode toggle with localStorage
+- 🌐 Global CDN hosting
 
 ## 📁 Project Structure
 
 ```
 Email_Signature_JosVisserICT/
-├── signature.html              # Main signature file
-├── signature-simple.html       # Simplified version
-├── cloudflare-pages/          # Deployment folder
-│   └── assets/                # Add your logos here!
-└── preview.html               # Preview page
+├── signature-final.html          ⭐ EMAIL SIGNATURE
+├── signature-final-preview.html  Preview page
+├── cloudflare-pages/             CLOUDFLARE DEPLOYMENT
+│   ├── assets/                   6 logo variants
+│   ├── index.html                ⭐ Brand Kit page
+│   ├── privacy.html              Privacy (NL)
+│   ├── privacy-en.html           Privacy (EN)
+│   ├── terms.html                Terms (NL)
+│   ├── terms-en.html             Terms (EN)
+│   ├── 404.html                  Custom error page
+│   └── _headers                  CORS config
+└── wiki/                         This documentation
 ```
 
 ## 🎯 Getting Started
@@ -45,6 +66,14 @@ Email_Signature_JosVisserICT/
 | Technical user | [Deployment Guide](Deployment-Guide) |
 | Using iPhone/iPad | [iOS Compatibility](iOS-Compatibility) |
 | Need logo help | [Logo Requirements](Logo-Requirements) |
+
+### Live URLs
+
+- 🎨 **Brand Kit:** https://static.josvisserict.nl
+- 🔒 **Privacy (NL):** https://static.josvisserict.nl/privacy.html
+- 🇬🇧 **Privacy (EN):** https://static.josvisserict.nl/privacy-en.html
+- 📜 **Terms (NL):** https://static.josvisserict.nl/terms.html
+- 🇬🇧 **Terms (EN):** https://static.josvisserict.nl/terms-en.html
 
 ## 📞 Contact Information
 

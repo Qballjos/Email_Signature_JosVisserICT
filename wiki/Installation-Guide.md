@@ -4,98 +4,37 @@ Complete step-by-step guide to installing your email signature.
 
 ## Overview
 
-This guide covers:
-- Creating and preparing logos
-- Deploying to Cloudflare Pages
-- Updating signature files
-- Installing in email clients
-- Testing and verification
+**Your system is already fully deployed!** This guide covers how to install the signature in your email client.
 
-**Estimated time:** 20-30 minutes
+**What's Ready:**
+- ✅ Brand Kit live at https://static.josvisserict.nl
+- ✅ 6 logo variants deployed
+- ✅ Email signature copy-ready
+- ✅ Privacy & Terms pages (NL + EN)
 
----
-
-## Step 1: Prepare Your Logos
-
-### ✅ Logo Already Ready
-
-Your logo is configured:
-
-| File | Details |
-|------|---------|
-| `josvisser-logo.png` | 1360×1360px, works for both light and dark mode |
-
-### Specifications
-
-- **Size:** 300x100px (recommended)
-- **Format:** PNG with transparent background
-- **File size:** Under 100KB
-- **Resolution:** 72-150 DPI
-
-**Detailed guide:** [Logo Requirements](Logo-Requirements)
-
-### Current Location
-
-```
-cloudflare-pages/assets/
-├── app.png (original high-res)
-└── josvisser-logo.png (used in signature) ✅
-```
-
-Logo is already deployed and working!
+**Estimated time:** 5-10 minutes
 
 ---
 
-## Step 2: Deploy to Cloudflare Pages
+## Step 1: Access Your Signature
 
-See the complete [Deployment Guide](Deployment-Guide) for all methods.
+### Method A: Via Brand Kit (Easiest) ⭐
 
-### Quick Deploy via GitHub
+1. Visit: https://static.josvisserict.nl
+2. Scroll to **"Email Signature"** section
+3. Click **"📋 Kopieer Handtekening"** button
+4. Signature is now copied to clipboard!
 
-1. **Login to Cloudflare:**
-   - Visit [dash.cloudflare.com](https://dash.cloudflare.com)
-   - Sign up (free) if needed
+### Method B: Via Local File
 
-2. **Connect Repository:**
-   - Workers & Pages → Create application
-   - Pages → Connect to Git
-   - Select: `Email_Signature_JosVisserICT`
-
-3. **Configure:**
-   - Project name: `email-signature-jos`
-   - Build output: `cloudflare-pages`
-   - Build command: (empty)
-
-4. **Deploy:**
-   - Click "Save and Deploy"
-   - Wait 30-60 seconds
-   - Get your URL: `https://email-signature-jos.pages.dev`
+1. Open `signature-final-preview.html` in browser
+2. Click in gray signature box
+3. Press **Cmd+A** (select all)
+4. Press **Cmd+C** (copy)
 
 ---
 
-## Step 3: Update Signature HTML
-
-### Edit signature.html
-
-1. Open `signature.html` in your text editor
-
-2. Find this line (appears twice):
-   ```html
-   <img src="YOUR_HOSTING_URL/logo-light.png" ...>
-   ```
-
-3. Replace `YOUR_HOSTING_URL` with your actual Cloudflare URL:
-   ```html
-   <img src="https://email-signature-jos.pages.dev/assets/logo-light.png" ...>
-   ```
-
-4. Find the second occurrence (for `logo-dark.png`) and update it too
-
-5. Save the file
-
----
-
-## Step 4: Install in Email Client
+## Step 2: Install in Email Client
 
 ### Apple Mail (macOS)
 
@@ -164,86 +103,148 @@ See the complete [Deployment Guide](Deployment-Guide) for all methods.
 
 ---
 
-## Step 5: Test Your Signature
+## Step 3: Test Your Signature
 
 ### Send Test Emails
 
-1. **Send to yourself:** Check how it looks
-2. **Test on multiple clients:**
-   - Gmail
-   - Apple Mail
-   - Outlook
-3. **Test on mobile:** Check phone/tablet display
-4. **Test dark mode:** Enable dark mode on devices that support it
+1. **Send to yourself** - Check how it looks
+2. **Test on mobile** - Check phone/tablet display
+3. **Test different clients** - Gmail, Outlook, Apple Mail
 
 ### What to Check
 
-- ✅ Logo appears correctly
-- ✅ All links are clickable
-- ✅ Colors look good
-- ✅ Layout is preserved
-- ✅ Text is readable
+- ✅ Logo appears correctly (90×90px, rounded corners)
+- ✅ All links are clickable (phone, email, website)
+- ✅ Colors look good (orange branding #ea8b39)
+- ✅ Layout is preserved (logo, separator, contact info)
+- ✅ Disclaimer is visible and readable
 - ✅ Mobile responsive
-- ✅ Dark mode switches (if supported)
+- ✅ No Unicode icons (removed for better alignment)
 
 ---
 
-## Step 6: Troubleshooting
+## Brand Kit Features
+
+Now that your signature is installed, explore the Brand Kit:
+
+### Available at https://static.josvisserict.nl
+
+**Logo Variants:**
+- Full Colour Logo - Primary use
+- Black Logo - For light backgrounds
+- App Icon - Application icons
+- Favicon - Website favicon
+- Artboard - Design work
+- Email Logo - Current signature logo (1360×1360px)
+
+**Legal Pages:**
+- Privacy Policy (NL + EN) with language switcher
+- Terms and Conditions (NL + EN) with language switcher
+- Dark mode toggle on all pages
+- Custom 404 error page
+
+**Features:**
+- 📋 One-click copy for all URLs
+- 🔗 Direct preview links
+- 🌙 Dark mode with localStorage
+- 🔄 Language switcher (NL ↔ EN)
+- 🎯 Custom 404 page
+
+---
+
+## Troubleshooting
 
 ### Logo Not Showing
 
 **Problem:** Logo doesn't appear in sent emails
 
 **Solutions:**
-1. Verify Cloudflare deployment succeeded
-2. Check URL in `signature.html` is correct
-3. Test URL directly in browser
-4. Ensure recipient allows external images
-5. Check CORS headers are configured
+1. Logo is already deployed at https://static.josvisserict.nl ✅
+2. Test URL directly: https://static.josvisserict.nl/assets/josvisser-logo.png
+3. Recipient may need to allow external images in their email client
+4. Some corporate email filters block external images
 
-### Formatting Looks Different
+### Formatting Issues
 
 **Problem:** Signature looks different when sent
 
 **Solutions:**
-1. Try `signature-simple.html` instead
-2. Some email clients strip CSS
-3. Use inline styles (already done)
-4. Test in different email clients
+1. Signature uses email-safe table layout ✅
+2. All styles are inline (no external CSS) ✅
+3. Unicode icons removed for better compatibility ✅
+4. Test in recipient's email client
 
-### Dark Mode Not Working
+### Logo Alignment Issues
 
-**Problem:** Dark mode doesn't switch automatically
-
-**Solutions:**
-1. Not all email clients support `prefers-color-scheme`
-2. Ensure both logo versions exist
-3. Apple Mail and Outlook mobile support it best
-4. Gmail has limited support
-
-### Apple Mail Modifies HTML
-
-**Problem:** Apple Mail changes signature after pasting
+**Problem:** Logo or text not aligned properly
 
 **Solutions:**
-1. Lock the signature file (see Step 4 above)
-2. Use "Paste and Match Style" (Cmd+Shift+V)
-3. Manually edit the `.mailsignature` file
+1. Unicode icons already removed ✅
+2. Table-based layout ensures consistent alignment ✅
+3. Logo is 90×90px for mobile optimization ✅
+4. Different email clients may render slightly differently
 
-**More help:** [Troubleshooting](Troubleshooting)
+### Apple Mail Signature Lock
+
+**How to prevent Apple Mail from modifying:**
+
+1. Close Mail completely
+2. Navigate to: `~/Library/Mail/V10/MailData/Signatures/`
+3. Find your `.mailsignature` file
+4. Right-click → Get Info → Check "Locked"
+
+**More help:** [Troubleshooting](Troubleshooting) | [iOS Compatibility](iOS-Compatibility)
+
+---
+
+## Additional Features
+
+### Update Contact Information
+
+To change your contact details in the signature:
+
+1. Edit `signature-final.html`
+2. Find the contact information section
+3. Update phone, email, website, address as needed
+4. Test locally with `signature-final-preview.html`
+5. Commit and use updated version
+
+### Use Different Logo
+
+To use a different logo variant:
+
+1. Visit Brand Kit: https://static.josvisserict.nl
+2. Choose your preferred logo variant
+3. Click **📋 Copy** next to the URL
+4. Edit `signature-final.html`
+5. Replace logo URL with your chosen variant
+6. Save and reinstall signature
+
+**Available variants:**
+- Full Colour (primary)
+- Black (light backgrounds)
+- App Icon
+- Current email logo (1360×1360px)
 
 ---
 
 ## Additional Resources
 
-- **[Deployment Guide](Deployment-Guide)** - Detailed Cloudflare setup
-- **[Logo Requirements](Logo-Requirements)** - Create proper logos
+- **[Quick Start Guide](Quick-Start-Guide)** - Fast 5-minute setup
+- **[Deployment Guide](Deployment-Guide)** - Cloudflare details
+- **[Logo Requirements](Logo-Requirements)** - Logo specifications
 - **[Troubleshooting](Troubleshooting)** - Fix common issues
-- **[Quick Start](Quick-Start-Guide)** - Fast 10-minute setup
+- **[iOS Compatibility](iOS-Compatibility)** - iPhone/iPad specific guide
 
 ---
 
-## Need Help?
+## Live Resources
 
-Check the [Troubleshooting](Troubleshooting) page or review the documentation files in the repository.
+- 🎨 [Brand Kit](https://static.josvisserict.nl) - All assets
+- 🔒 [Privacy Policy](https://static.josvisserict.nl/privacy.html) - GDPR info
+- 📜 [Terms](https://static.josvisserict.nl/terms.html) - Legal terms
+
+---
+
+**Installation Complete!** Send test emails and enjoy your professional signature! ✅
 
