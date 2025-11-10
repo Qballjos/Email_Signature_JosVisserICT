@@ -21,6 +21,38 @@
             background: #f5f5f5;
         }
         
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 5px;
+            background: white;
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .language-switcher a {
+            padding: 8px 16px;
+            text-decoration: none;
+            color: #666;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        
+        .language-switcher a:hover {
+            background: #f5f5f5;
+        }
+        
+        .language-switcher a.active {
+            background: #ea8b39;
+            color: white;
+        }
+        
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -116,10 +148,20 @@
             h2 {
                 font-size: 20px;
             }
+            
+            .language-switcher {
+                top: 10px;
+                right: 10px;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="language-switcher">
+        <a href="/terms.html" class="active">NL</a>
+        <a href="/terms-en.html">EN</a>
+    </div>
+
     <div class="container">
         <header>
             <h1>Algemene Voorwaarden</h1>
