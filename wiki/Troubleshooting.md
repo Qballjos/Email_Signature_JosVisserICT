@@ -147,31 +147,53 @@ Recipients have "Block external images" enabled in their email client.
 
 ---
 
-### Dark Mode Not Working
+### Theme Toggle Not Working
 
-**Problem:** Dark mode toggle doesn't switch theme
+**Problem:** Theme toggle doesn't switch or shows wrong icon
+
+**Current System:** 3-state toggle (Auto → Light → Dark → Auto)
+
+**Icon Meanings:**
+- 🔄 = Auto mode (follows system)
+- 🌙 = Light mode (forced)
+- ☀️ = Dark mode (forced)
 
 **Solutions:**
 
-1. **Check localStorage:**
+1. **Check current state:**
    - Open browser console (F12)
-   - Type: `localStorage.getItem('theme')`
-   - Should return 'dark' or 'light'
+   - Brand Kit: `localStorage.getItem('brandkit-theme')`
+   - Legal pages: `localStorage.getItem('theme')`
+   - Should return: 'auto', 'light', or 'dark'
 
-2. **Clear localStorage:**
+2. **Reset to auto:**
    ```javascript
-   localStorage.removeItem('theme')
-   // Then refresh page and try again
+   // For Brand Kit & 404
+   localStorage.setItem('brandkit-theme', 'auto')
+   
+   // For legal pages
+   localStorage.setItem('theme', 'auto')
+   
+   // Then refresh page
+   location.reload()
    ```
 
-3. **Browser compatibility:**
+3. **Test system detection:**
+   - Change your OS dark/light mode
+   - In auto mode (🔄), page should update automatically
+   - In manual mode (🌙/☀️), page stays same
+
+4. **Browser compatibility:**
    - Works in all modern browsers ✅
    - Requires JavaScript enabled
    - Check if JavaScript is blocked
 
-4. **Cached version:**
-   - Hard refresh: Cmd+Shift+R
-   - Clear cache and reload
+5. **Clear and reset:**
+   ```javascript
+   localStorage.clear()
+   location.reload()
+   // Starts fresh in auto mode
+   ```
 
 ---
 

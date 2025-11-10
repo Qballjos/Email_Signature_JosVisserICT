@@ -24,17 +24,20 @@ A complete **Brand Asset System** for **Jos Visser ICT** featuring:
 - 📧 Universal email client compatibility
 
 ### Brand Kit (static.josvisserict.nl)
-- 🎨 Modern dark theme asset hosting
+- 🎨 Modern dark/light theme with auto-detect
 - 🖼️ 6 logo variants (Full Colour, Black, App Icon, Favicon, Artboard)
 - 📋 One-click copy for all URLs
 - ⚡ Real-time status monitoring
 - 🔗 Direct preview links
+- 🌓 3-state theme toggle (Auto → Light → Dark → Auto)
 
 ### Legal Pages
 - 🔒 Privacy Policy (NL + EN) - GDPR compliant
 - 📜 Terms and Conditions (NL + EN)
 - 🔄 Language switcher (NL ↔ EN)
-- 🌙 Dark mode toggle with localStorage
+- 🌓 Auto theme detect - 3-state toggle (Auto/Light/Dark)
+- 🔄 Real-time sync met systeem dark/light mode
+- 💾 Theme persistence via localStorage
 - 🌐 Global CDN hosting
 
 ## 📁 Project Structure

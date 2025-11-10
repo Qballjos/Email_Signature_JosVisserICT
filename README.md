@@ -20,21 +20,24 @@ Complete brand asset system with email signature, logo variants, and legal pages
 - 📧 **Universal compatibility** - Gmail, Outlook, Apple Mail, iOS
 
 ### Brand Kit
-- 🎨 **Modern dark theme** - Asset hosting pagina geïnspireerd op industry best practices
+- 🎨 **Modern dark/light theme** - Asset hosting met auto theme detect
 - 🖼️ **Multiple logo variants** - Full Colour, Black, App Icon, Favicon, Artboard
 - 📋 **One-click copy** - Copy buttons bij elke URL
 - 🔗 **Direct preview** - Klikbare URLs openen in nieuwe tab
 - ⚡ **Real-time updates** - Live status monitoring
 - 🌐 **Favicon support** - Brand consistency across alle pagina's
-- 🎯 **Custom 404 page** - Branded error page met quick links
+- 🎯 **Custom 404 page** - Branded error page met theme toggle
 - 🔗 **Meta tags** - Open Graph en Twitter Cards voor social sharing
+- 🔄 **Auto theme** - Volgt systeem dark/light mode automatisch
 
 ### Legal & Privacy
 - 🔒 **GDPR compliant** - Volledige privacyverklaring (AVG/GDPR)
 - 📜 **Algemene Voorwaarden** - Terms of Use pagina
 - 🌍 **Meertalig** - Nederlands + Engels met taal-switcher
 - 🔄 **Taal-switcher** - Fixed NL/EN toggle rechts boven
-- 🌙 **Dark mode** - Toggle op alle legal pagina's met localStorage
+- 🌙 **Auto theme detect** - 3-state toggle: Auto (🔄) → Light (🌙) → Dark (☀️)
+- 🔄 **System theme sync** - Volgt macOS/Windows/Linux dark mode automatisch
+- 💾 **Theme persistence** - Voorkeur opgeslagen in localStorage
 - 🍪 **Cookie compliance** - Optionele consent banner beschikbaar
 - 🌐 **Global CDN** - Fast loading via `static.josvisserict.nl`
 
@@ -196,11 +199,26 @@ Email_Signature_JosVisserICT/
 ✅ **Privacy Policy** - Volledige AVG/GDPR compliant privacyverklaring (NL + EN)  
 ✅ **Terms of Use** - Algemene voorwaarden (NL + EN)  
 ✅ **Language Switcher** - Easy NL ↔ EN toggle op alle legal pagina's  
-✅ **Dark Mode** - Theme toggle met localStorage persistence  
+✅ **Auto Theme Detect** - 3-state toggle volgt systeem dark/light mode  
+✅ **Real-time Sync** - Updates automatisch bij systeem thema wijziging  
+✅ **Theme Persistence** - Voorkeur opgeslagen in localStorage  
 ✅ **No tracking** - Geen analytics of marketing cookies  
 ✅ **Secure** - HTTPS met Cloudflare SSL  
 ✅ **Transparent** - Duidelijke informatie over gegevensverwerking  
 ✅ **International ready** - Support voor Nederlandse en internationale klanten
+
+## 🌓 Theme System
+
+**3-State Toggle op alle 6 pagina's:**
+- 🔄 **Auto** - Volgt systeem dark/light mode (standaard)
+- 🌙 **Light** - Force light mode
+- ☀️ **Dark** - Force dark mode
+
+**Smart Features:**
+- Detecteert macOS, Windows, Linux dark mode
+- Real-time updates bij systeem wijziging
+- Separate persistence voor Brand Kit en legal pages
+- Smooth transitions tussen themes
 
 ---
 
@@ -254,8 +272,10 @@ Professional email signature + Brand Kit hosting + Legal pages = Complete soluti
 - ✅ Apple Touch Icon support
 - ✅ Privacy & Terms pages (NL + EN)
 - ✅ Taal-switcher op alle legal pagina's
-- ✅ Dark mode toggle (🌙/☀️) met localStorage
-- ✅ Custom 404 error page (branded)
+- ✅ Auto theme detect (🔄 volgt systeem dark/light mode)
+- ✅ 3-state theme toggle (Auto/Light/Dark) op alle 6 pagina's
+- ✅ Real-time systeem thema sync
+- ✅ Custom 404 error page (branded met theme support)
 - ✅ Open Graph & Twitter Cards (social sharing)
 - ✅ SEO meta descriptions
 - ✅ GDPR compliant (geen tracking)

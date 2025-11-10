@@ -146,9 +146,10 @@ Now that your signature is installed, explore the Brand Kit:
 **Features:**
 - 📋 One-click copy for all URLs
 - 🔗 Direct preview links
-- 🌙 Dark mode with localStorage
+- 🌓 Auto theme detect (volgt systeem dark/light mode)
+- 🔄 3-state theme toggle (Auto/Light/Dark)
 - 🔄 Language switcher (NL ↔ EN)
-- 🎯 Custom 404 page
+- 🎯 Custom 404 page met theme support
 
 ---
 

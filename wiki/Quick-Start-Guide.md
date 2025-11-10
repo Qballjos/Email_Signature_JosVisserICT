@@ -99,9 +99,11 @@ Visit **https://static.josvisserict.nl** to:
 - ✅ Brand Kit pagina with all assets
 - ✅ 6 logo variants ready to use
 - ✅ Privacy & Terms in NL + EN
-- ✅ Dark mode on all legal pages
-- ✅ Custom 404 error page
+- ✅ Auto theme detect (volgt systeem dark/light mode)
+- ✅ 3-state theme toggle op alle 6 pagina's
+- ✅ Custom 404 error page met theme support
 - ✅ Meta tags for social sharing
+- ✅ Real-time systeem thema synchronisatie
 
 ---
 
