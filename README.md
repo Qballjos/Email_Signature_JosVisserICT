@@ -22,7 +22,7 @@ Complete brand asset system with email signature, logo variants, and legal pages
 ### Brand Kit
 - 🎨 **Modern dark/light theme** - Asset hosting met auto theme detect
 - 🖼️ **Multiple logo variants** - Full Colour, Black, App Icon, Favicon, Artboard
-- 🎨 **Contact Icons pack** - 6 SVG iconen in brand kleur (#ea8b39)
+- 🎨 **Contact Icons pack** - 12 SVG iconen in brand kleur (#ea8b39)
 - 📋 **One-click download** - Download SVG iconen direct
 - 📋 **One-click copy** - Copy buttons bij elke URL
 - 🔗 **Direct preview** - Klikbare URLs openen in nieuwe tab
@@ -111,19 +111,33 @@ Visit the Brand Kit: `https://static.josvisserict.nl`
 | **Artboard** | `josvisser-logo-artboard.png` | Design artboard |
 | **Legacy** | `josvisser-logo.png` | Email signature (1360×1360px) |
 
-### Contact Icons Pack
+### Contact Icons Pack (12 iconen)
+
+**Contact Iconen:**
 | Icon | Bestand | Gebruik |
 |------|---------|---------|
 | **Phone** | `josvisser-icon-phone.svg` | Telefoon contact |
 | **Email** | `josvisser-icon-email.svg` | Email contact |
 | **Website** | `josvisser-icon-website.svg` | Website/globe |
 | **Location** | `josvisser-icon-location.svg` | Adres/locatie |
-| **LinkedIn** | `josvisser-icon-linkedin.svg` | Social media |
-| **GitHub** | `josvisser-icon-github.svg` | Developer/code |
 
-**Kleur:** #ea8b39 (brand orange)  
-**Formaat:** SVG (24×24px, schaalbaar)  
-**Download:** Via Brand Kit met one-click buttons
+**Social Media Iconen:**
+| Icon | Bestand | Platform |
+|------|---------|----------|
+| **LinkedIn** | `josvisser-icon-linkedin.svg` | Professional networking |
+| **GitHub** | `josvisser-icon-github.svg` | Developer/code |
+| **Facebook** | `josvisser-icon-facebook.svg` | Social media |
+| **Instagram** | `josvisser-icon-instagram.svg` | Social media |
+| **X (Twitter)** | `josvisser-icon-twitter.svg` | Social media |
+| **YouTube** | `josvisser-icon-youtube.svg` | Video platform |
+| **TikTok** | `josvisser-icon-tiktok.svg` | Social media |
+| **WhatsApp** | `josvisser-icon-whatsapp.svg` | Messaging |
+
+**Specificaties:**
+- **Kleur:** #ea8b39 (brand orange)
+- **Formaat:** SVG (24×24px, schaalbaar)
+- **Download:** Via Brand Kit met one-click buttons
+- **Gebruik:** Websites, presentaties, marketing, toekomstige email signatures
 
 ### Email Signature Specs
 - **Logo size:** 90×90px (displayed), 1360×1360px (source)
@@ -284,7 +298,7 @@ Professional email signature + Brand Kit hosting + Legal pages = Complete soluti
 
 **Features Overzicht:**
 - ✅ 6 logo varianten (URL-vriendelijke bestandsnamen)
-- ✅ 6 contact icons (SVG in brand kleur #ea8b39)
+- ✅ 12 contact & social icons (SVG in brand kleur #ea8b39)
 - ✅ Email signature copy functionaliteit
 - ✅ One-click SVG icon downloads
 - ✅ Favicon op alle pagina's
