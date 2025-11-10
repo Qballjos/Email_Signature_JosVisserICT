@@ -154,9 +154,9 @@ Recipients have "Block external images" enabled in their email client.
 **Current System:** 3-state toggle (Auto → Light → Dark → Auto)
 
 **Icon Meanings:**
-- 🔄 = Auto mode (follows system)
-- 🌙 = Light mode (forced)
-- ☀️ = Dark mode (forced)
+- ⚙️ = Auto mode (follows system)
+- ☀️ = Light mode (forced)
+- 🌙 = Dark mode (forced)
 
 **Solutions:**
 

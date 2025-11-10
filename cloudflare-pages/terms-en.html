@@ -275,7 +275,7 @@
             <a href="/terms-en.html" class="active">EN</a>
         </div>
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
-            <span class="theme-icon">🌙</span>
+            <span class="theme-icon">⚙️</span>
         </button>
     </div>
 
@@ -450,11 +450,11 @@
             const savedTheme = localStorage.getItem('theme');
             
             if (savedTheme === 'light') {
-                icon.textContent = '🌙';
-            } else if (savedTheme === 'dark') {
                 icon.textContent = '☀️';
+            } else if (savedTheme === 'dark') {
+                icon.textContent = '🌙';
             } else {
-                icon.textContent = '🔄'; // Auto mode
+                icon.textContent = '⚙️'; // Auto mode
             }
         }
         

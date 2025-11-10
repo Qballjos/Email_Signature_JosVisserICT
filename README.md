@@ -35,7 +35,7 @@ Complete brand asset system with email signature, logo variants, and legal pages
 - 📜 **Algemene Voorwaarden** - Terms of Use pagina
 - 🌍 **Meertalig** - Nederlands + Engels met taal-switcher
 - 🔄 **Taal-switcher** - Fixed NL/EN toggle rechts boven
-- 🌙 **Auto theme detect** - 3-state toggle: Auto (🔄) → Light (🌙) → Dark (☀️)
+- 🌙 **Auto theme detect** - 3-state toggle: Auto (⚙️) → Light (☀️) → Dark (🌙)
 - 🔄 **System theme sync** - Volgt macOS/Windows/Linux dark mode automatisch
 - 💾 **Theme persistence** - Voorkeur opgeslagen in localStorage
 - 🍪 **Cookie compliance** - Optionele consent banner beschikbaar
@@ -210,15 +210,16 @@ Email_Signature_JosVisserICT/
 ## 🌓 Theme System
 
 **3-State Toggle op alle 6 pagina's:**
-- 🔄 **Auto** - Volgt systeem dark/light mode (standaard)
-- 🌙 **Light** - Force light mode
-- ☀️ **Dark** - Force dark mode
+- ⚙️ **Auto** - Volgt systeem dark/light mode (standaard)
+- ☀️ **Light** - Force light mode
+- 🌙 **Dark** - Force dark mode
 
 **Smart Features:**
 - Detecteert macOS, Windows, Linux dark mode
 - Real-time updates bij systeem wijziging
 - Separate persistence voor Brand Kit en legal pages
 - Smooth transitions tussen themes
+- Intuïtieve iconen: gear (auto), zon (light), maan (dark)
 
 ---
 
