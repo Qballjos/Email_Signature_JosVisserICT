@@ -1,10 +1,14 @@
 # 📱 iOS Compatibility Guide
 
-Complete guide for using your email signature on iPhone and iPad.
+Complete guide for using the Jos Visser ICT email signature on iPhone and iPad.
 
 ## ✅ iOS Compatibility Overview
 
-Your email signature **works great on iOS**! Here's the complete compatibility breakdown:
+Your email signature **works great on iOS**! Optimized for mobile with 90×90px logo.
+
+**Brand Kit:** https://static.josvisserict.nl (also works on mobile!)
+
+Here's the complete compatibility breakdown:
 
 | iOS Email App | HTML Support | Dark Mode | Installation |
 |---------------|--------------|-----------|--------------|
@@ -52,15 +56,16 @@ Your email signature **works great on iOS**! Here's the complete compatibility b
 
 **Steps:**
 
-1. **Open signature file:**
-   - Visit your repository on iPhone
-   - Open `signature.html` in Safari
-   - Or email the file to yourself
-
-2. **Select and copy:**
-   - Tap and hold on the signature
-   - Tap "Select All"
+1. **Open Brand Kit on iPhone:**
+   - Visit: https://static.josvisserict.nl
+   - Scroll to "Email Signature" section
+   - Tap and hold to select signature
    - Tap "Copy"
+
+2. **Or use local file:**
+   - Email `signature-final.html` to yourself
+   - Open on iPhone
+   - Tap and hold → Select All → Copy
 
 3. **Add to Mail settings:**
    - Go to **Settings** → **Mail** → **Signature**
@@ -68,7 +73,7 @@ Your email signature **works great on iOS**! Here's the complete compatibility b
    - Tap and hold → **Paste**
    - Close settings (saves automatically)
 
-**Note:** Some formatting may be simplified by iOS Mail.
+**Note:** iOS Mail works well with this signature! Mobile-optimized 90×90px logo.
 
 ---
 
