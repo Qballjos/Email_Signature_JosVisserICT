@@ -1,10 +1,12 @@
 # Headers for Cloudflare Pages
-# This zorgt ervoor dat we geen dubbele CORS headers krijgen
+# Ensures CORS is enabled for all assets and branding files
+
+/*
+  Access-Control-Allow-Origin: *
+  X-Content-Type-Options: nosniff
 
 /assets/*
-  Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=31536000, immutable
-  X-Content-Type-Options: nosniff
 
 /*.png
   Cache-Control: public, max-age=31536000, immutable
