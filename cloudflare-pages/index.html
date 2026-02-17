@@ -132,6 +132,99 @@
         body.light-mode .update-time {
             background: #f0f0f0;
         }
+
+        /* Instruction Dropdown Styles */
+        .instruction-selector-container {
+            margin-bottom: 20px;
+        }
+
+        .instruction-selector {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(234, 139, 57, 0.1);
+            border: 1px solid rgba(234, 139, 57, 0.3);
+            border-radius: 8px;
+            color: #ea8b39;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ea8b39' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 18px;
+            transition: all 0.2s ease;
+        }
+
+        .instruction-selector:hover {
+            border-color: #ea8b39;
+            background-color: rgba(234, 139, 57, 0.15);
+        }
+
+        body.light-mode .instruction-selector {
+            background-color: rgba(234, 139, 57, 0.05);
+        }
+
+        .instruction-panel {
+            display: none;
+            background: rgba(234, 139, 57, 0.05);
+            border: 1px solid rgba(234, 139, 57, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 15px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .instruction-panel.active {
+            display: block;
+        }
+
+        .instruction-panel h3 {
+            font-size: 18px;
+            color: #ea8b39;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .instruction-panel ol {
+            margin-left: 20px;
+            color: #ccc;
+        }
+
+        body.light-mode .instruction-panel ol {
+            color: #666;
+        }
+
+        .instruction-panel li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .instruction-panel strong {
+            color: #fff;
+        }
+
+        body.light-mode .instruction-panel strong {
+            color: #333;
+        }
+
+        .tip-box {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 3px solid #10b981;
+            padding: 10px 15px;
+            margin-top: 15px;
+            border-radius: 0 8px 8px 0;
+            font-size: 13px;
+            color: #10b981;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
         
         .theme-toggle {
             position: fixed;
@@ -805,9 +898,63 @@
         <!-- Email Signature -->
         <div class="section">
             <h2>Email Signature</h2>
-            <div class="preview-instructions">
-                <strong>📋 Installatie:</strong> Selecteer de handtekening hieronder (hele grijze box) → Cmd+A → Cmd+C → Plak in je email client
+            
+            <div class="instruction-selector-container">
+                <select class="instruction-selector" id="clientSelector" onchange="showInstructions(this.value)">
+                    <option value="macos">💻 macOS Mail (Aanbevolen)</option>
+                    <option value="ios">📱 iOS (iPhone / iPad)</option>
+                    <option value="outlook">📧 Outlook (Desktop / Web)</option>
+                    <option value="gmail">📨 Gmail (Web)</option>
+                </select>
+
+                <!-- macOS Mail -->
+                <div id="inst-macos" class="instruction-panel active">
+                    <h3>💻 macOS Mail Installatie</h3>
+                    <ol>
+                        <li>Klik op de <strong>"Kopieer HTML code"</strong> knop hieronder.</li>
+                        <li>Open Mail → Instellingen (Cmd+,) → Handtekeningen.</li>
+                        <li>Maak een nieuwe handtekening aan met de <strong>+</strong> knop.</li>
+                        <li>Sluit Mail volledig via <strong>Cmd+Q</strong>.</li>
+                        <li>Ga in Finder naar: <code>~/Library/Mail/V10/MailData/Signatures/</code></li>
+                        <li>Vervang de inhoud van het nieuwste <code>.mailsignature</code> bestand met de gekopieerde HTML.</li>
+                        <li><strong>Belangrijk:</strong> Vink "Locked" aan in de bestandsinfo om je styling te behouden.</li>
+                    </ol>
+                </div>
+
+                <!-- iOS -->
+                <div id="inst-ios" class="instruction-panel">
+                    <h3>📱 iOS Installatie</h3>
+                    <ol>
+                        <li>Klik op <strong>"Kopieer Handtekening"</strong> hieronder.</li>
+                        <li>Open Instellingen → Mail → Handtekening.</li>
+                        <li>Plak de handtekening in het veld.</li>
+                        <li><strong>Pro Tip:</strong> Schud je telefoon direct na het plakken en kies "Herstel/Undo" om de originele opmaak terug te krijgen.</li>
+                    </ol>
+                </div>
+
+                <!-- Outlook -->
+                <div id="inst-outlook" class="instruction-panel">
+                    <h3>📧 Outlook Installatie</h3>
+                    <ol>
+                        <li>Klik op <strong>"Kopieer Handtekening"</strong> hieronder.</li>
+                        <li>Ga naar Instellingen → Handtekeningen → Nieuw.</li>
+                        <li>Plak de handtekening (Cmd+V).</li>
+                        <li>Sla op en selecteer als standaard voor nieuwe berichten.</li>
+                    </ol>
+                </div>
+
+                <!-- Gmail -->
+                <div id="inst-gmail" class="instruction-panel">
+                    <h3>📨 Gmail Installatie</h3>
+                    <ol>
+                        <li>Klik op <strong>"Kopieer Handtekening"</strong> hieronder.</li>
+                        <li>Ga naar Gmail Instellingen (tandwiel) → Alle instellingen bekijken.</li>
+                        <li>Scroll naar Handtekening → Nieuwe maken.</li>
+                        <li>Plak de handtekening en klik onderaan op <strong>"Wijzigingen opslaan"</strong>.</li>
+                    </ol>
+                </div>
             </div>
+
             <div class="signature-preview" id="signaturePreview">
                 <!-- Email Signature for Jos Visser -->
                 <table cellpadding="0" cellspacing="0" border="0" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #333333; max-width: 600px; border-collapse: collapse;">
@@ -1047,6 +1194,19 @@
             });
         })();
         
+        // Show instructions for specific client
+        function showInstructions(client) {
+            // Hide all panels
+            document.querySelectorAll('.instruction-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            // Show selected panel
+            const selectedPanel = document.getElementById('inst-' + client);
+            if (selectedPanel) {
+                selectedPanel.classList.add('active');
+            }
+        }
+
         // Copy to clipboard functie
         function copyToClipboard(text, button) {
             navigator.clipboard.writeText(text).then(function() {
