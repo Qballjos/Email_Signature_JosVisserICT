@@ -817,12 +817,12 @@
                                 <tr>
                                     <!-- Logo Column -->
                                     <td style="vertical-align: middle; padding-right: 20px;">
-                                        <img src="https://static.josvisserict.nl/assets/josvisser-logo-app-icon.png" alt="Jos Visser ICT" style="display: block; width: 90px; height: 90px; border: 0; border-radius: 12px;">
+                                        <img src="https://static.josvisserict.nl/assets/josvisser-logo-app-icon.png" alt="Jos Visser ICT" width="90" height="90" style="display: block; width: 90px; height: 90px; border: 0; border-radius: 12px;">
                                     </td>
                                     
                                     <!-- Separator Line -->
                                     <td style="vertical-align: middle; padding-right: 20px;">
-                                        <div style="width: 3px; height: 220px; background: linear-gradient(180deg, #ea8b39 0%, rgba(234, 139, 57, 0.3) 100%); border-radius: 10px;"></div>
+                                        <div style="width: 3px; height: 220px; background-color: #ea8b39; border-radius: 10px;"></div>
                                     </td>
                                     
                                     <!-- Contact Information Column -->
@@ -1066,22 +1066,34 @@
             });
         }
         
-        // Copy signature functie
-        function copySignature() {
+        // Copy signature functie met betere rich text support
+        async function copySignature() {
             const signatureElement = document.getElementById('signaturePreview');
-            const range = document.createRange();
-            range.selectNode(signatureElement);
-            window.getSelection().removeAllRanges();
-            window.getSelection().addRange(range);
             
             try {
-                document.execCommand('copy');
-                alert('✅ Handtekening gekopieerd! Plak deze nu in je email client.');
+                // Gebruik de moderne Clipboard API voor betere styling preservation
+                const type = "text/html";
+                const blob = new Blob([signatureElement.innerHTML], { type });
+                const data = [new ClipboardItem({ [type]: blob })];
+                
+                await navigator.clipboard.write(data);
+                alert('✅ Handtekening gekopieerd met alle styling! Plak deze nu in je email client.');
             } catch (err) {
-                alert('❌ Kon handtekening niet kopiëren. Probeer handmatig te selecteren en kopiëren.');
+                console.error('Modern copy failed, trying fallback...', err);
+                // Fallback voor oudere browsers
+                const range = document.createRange();
+                range.selectNode(signatureElement);
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+                
+                try {
+                    document.execCommand('copy');
+                    alert('✅ Handtekening gekopieerd! Plak deze nu in je email client.');
+                } catch (fallbackErr) {
+                    alert('❌ Kon handtekening niet kopiëren. Probeer handmatig te selecteren en kopiëren.');
+                }
+                window.getSelection().removeAllRanges();
             }
-            
-            window.getSelection().removeAllRanges();
         }
         
         // Download SVG iconen
