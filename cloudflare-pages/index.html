@@ -897,7 +897,10 @@
                     </tr>
                 </table>
             </div>
-            <button class="btn" onclick="copySignature()" style="width: 100%;">📋 Kopieer Handtekening</button>
+            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                <button class="btn" onclick="copySignature()" style="flex: 1; margin-top: 0;">📋 Kopieer Handtekening</button>
+                <button class="btn" onclick="copySignatureHTML()" style="flex: 1; margin-top: 0;">📋 Kopieer HTML code</button>
+            </div>
         </div>
 
         <!-- Pagina's -->
@@ -1093,6 +1096,20 @@
                     alert('❌ Kon handtekening niet kopiëren. Probeer handmatig te selecteren en kopiëren.');
                 }
                 window.getSelection().removeAllRanges();
+            }
+        }
+
+        // Copy raw HTML van de handtekening
+        async function copySignatureHTML() {
+            const signatureElement = document.getElementById('signaturePreview');
+            const htmlCode = signatureElement.innerHTML.trim();
+            
+            try {
+                await navigator.clipboard.writeText(htmlCode);
+                alert('✅ HTML code gekopieerd! Handig voor Mac Mail of geavanceerde settings.');
+            } catch (err) {
+                console.error('Copy HTML failed: ', err);
+                alert('❌ Kon HTML niet kopiëren. Selecteer de code handmatig.');
             }
         }
         
