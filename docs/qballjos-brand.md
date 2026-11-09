@@ -5,6 +5,7 @@ Personal developer brand within Jos Visser ICT, hosted by the existing Cloudflar
 ## Page and assets
 
 - `/qballjos.html` — responsive standalone brand kit page
+- `/assets/qballjos-banner.png` — GitHub/social banner (2172 × 724), also used on the GitHub profile
 - `/assets/qballjos-icon.svg` — scalable app/avatar icon
 - `/assets/qballbot-laptop.png` — primary programmer mascot, used in the page hero
 - `/assets/qballbot-thumb.png` — standing mascot with thumbs up
