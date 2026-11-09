@@ -1,6 +1,6 @@
-# Qballjos developer brand
+# Qballjos — IT System Engineer & hobby projects
 
-Personal developer brand within Jos Visser ICT, hosted by the existing Cloudflare Pages static site.
+Jos Visser is an IT System Engineer. Qballjos is his personal identity for hobby projects around self-hosting, Docker, home automation and AI-assisted coding, alongside Jos Visser ICT.
 
 ## Page and assets
 
@@ -20,7 +20,7 @@ The eight PNGs are detailed AI-generated raster illustrations with genuine alpha
 
 ## Character direction
 
-QballBot is a playful, slightly stubborn programmer and self-hosting developer. His charcoal zip hoodie, swept-back brown helmet crest and sculpted beard trim personalize the original white/slate robot and orange headset. His dark visor and warm orange eyes keep him recognizably robotic. The laptop and code tablet emphasize programming rather than an inventor theme.
+QballBot represents an IT System Engineer who enjoys self-hosting and coding as a hobby. His charcoal zip hoodie, swept-back brown helmet crest and sculpted beard trim personalize the original white/slate robot and orange headset. His dark visor and warm orange eyes keep him recognizably robotic. The laptop and code tablet represent his hobby projects; they do not imply that his professional role is a software developer.
 
 The supplied portrait was used as a private visual reference; it is not distributed with the public brand assets. Generated poses can have small variations in detailing.
 
